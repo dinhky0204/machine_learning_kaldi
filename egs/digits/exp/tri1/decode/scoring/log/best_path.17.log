@@ -1,0 +1,10 @@
+# lattice-best-path --lm-scale=17 --word-symbol-table=exp/tri1/graph/words.txt "ark:gunzip -c exp/tri1/decode/lat.*.gz|" ark,t:exp/tri1/decode/scoring/17.tra 
+# Started at Sun Mar  4 09:48:16 +07 2018
+#
+lattice-best-path --lm-scale=17 --word-symbol-table=exp/tri1/graph/words.txt 'ark:gunzip -c exp/tri1/decode/lat.*.gz|' ark,t:exp/tri1/decode/scoring/17.tra 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-Ky1, best cost 176.77 + 8631.47 = 8808.24 over 99 frames.
+dinhky-Ky1 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:124) Overall cost per frame is 88.9722 = 1.78556 [graph] + 87.1866 [acoustic] over 99 frames.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:128) Done 1 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sun Mar  4 09:48:16 +07 2018, elapsed time 0 seconds
