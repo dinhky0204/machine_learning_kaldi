@@ -1,0 +1,32 @@
+# gmm-gselect --n=25 "--gselect=ark,s,cs:gunzip -c exp/ubm4/gselect.4.gz|" "fgmm-global-to-gmm exp/ubm4/2.ubm - |" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- |" ark:- | fgmm-global-acc-stats --gselect=ark,s,cs:- exp/ubm4/2.ubm "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- |" exp/ubm4/2.4.acc 
+# Started at Wed Mar 14 09:18:37 +07 2018
+#
+gmm-gselect --n=25 '--gselect=ark,s,cs:gunzip -c exp/ubm4/gselect.4.gz|' 'fgmm-global-to-gmm exp/ubm4/2.ubm - |' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- |' ark:- 
+fgmm-global-acc-stats --gselect=ark,s,cs:- exp/ubm4/2.ubm 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- |' exp/ubm4/2.4.acc 
+fgmm-global-to-gmm exp/ubm4/2.ubm - 
+splice-feats ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- 
+transform-feats exp/tri3b_ali/final.mat ark:- ark:- 
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 9 utterances, errors on 0
+transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- 
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (fgmm-global-to-gmm[5.4.10~1-f629b]:main():fgmm-global-to-gmm.cc:58) Written diagonal GMM to -
+transform-feats exp/tri3b_ali/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri3b_ali/trans.4 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- 
+splice-feats ark:- ark:- 
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 9 utterances, errors on 0
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (gmm-gselect[5.4.10~1-f629b]:main():gmm-gselect.cc:114) For 0'th file, average UBM likelihood over 99 frames is -69.0737
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average logdet is 5.0698 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (gmm-gselect[5.4.10~1-f629b]:main():gmm-gselect.cc:125) Done 9 files, 0 with errors, average UBM log-likelihood is -67.8428 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average logdet is 5.0698 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (fgmm-global-acc-stats[5.4.10~1-f629b]:main():fgmm-global-acc-stats.cc:148) Done 9 files; 0 with errors.
+LOG (fgmm-global-acc-stats[5.4.10~1-f629b]:main():fgmm-global-acc-stats.cc:150) Overall likelihood per frame = -67.835 over 920 (weighted) frames.
+LOG (fgmm-global-acc-stats[5.4.10~1-f629b]:main():fgmm-global-acc-stats.cc:155) Written accs to exp/ubm4/2.4.acc
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Mar 14 09:18:38 +07 2018, elapsed time 1 seconds

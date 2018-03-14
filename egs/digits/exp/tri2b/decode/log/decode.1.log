@@ -1,0 +1,17 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2b/graph/words.txt exp/tri2b/final.mdl exp/tri2b/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2b/decode/lat.1.gz" 
+# Started at Wed Mar 14 09:18:08 +07 2018
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2b/graph/words.txt exp/tri2b/final.mdl exp/tri2b/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2b/decode/lat.1.gz' 
+transform-feats exp/tri2b/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+splice-feats ark:- ark:- 
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 99 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 1 utterances; 0 had errors.
+dinhky-Ky1 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-Ky1 is -5.80149 over 99 frames.
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:176) Time taken 0.0625901s: real-time factor assuming 100 frames/sec is 0.0632223
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:179) Done 1 utterances, failed for 0
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -5.80149 over 99 frames.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 14 09:18:08 +07 2018, elapsed time 0 seconds

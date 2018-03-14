@@ -1,0 +1,31 @@
+# gunzip -c exp/tri3b/decode.si/lat.1.gz | lattice-to-post --acoustic-scale=0.083333 ark:- ark:- | weight-silence-post 0.01 1:2:3:4:5:6:7:8:9:10 exp/tri3b/final.alimdl ark:- ark:- | gmm-post-to-gpost exp/tri3b/final.alimdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b/final.mat ark:- ark:- |" ark:- ark:- | gmm-est-fmllr-gpost --fmllr-update-type=full --spk2utt=ark:data/test/split1/1/spk2utt exp/tri3b/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b/final.mat ark:- ark:- |" ark,s,cs:- ark:exp/tri3b/decode/pre_trans.1 
+# Started at Wed Mar 14 09:18:30 +07 2018
+#
+weight-silence-post 0.01 1:2:3:4:5:6:7:8:9:10 exp/tri3b/final.alimdl ark:- ark:- 
+gmm-post-to-gpost exp/tri3b/final.alimdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b/final.mat ark:- ark:- |' ark:- ark:- 
+gmm-est-fmllr-gpost --fmllr-update-type=full --spk2utt=ark:data/test/split1/1/spk2utt exp/tri3b/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3b/final.mat ark:- ark:- |' ark,s,cs:- ark:exp/tri3b/decode/pre_trans.1 
+lattice-to-post --acoustic-scale=0.083333 ark:- ark:- 
+LOG (lattice-to-post[5.4.10~1-f629b]:main():lattice-to-post.cc:106) Overall average log-like/frame is -5.75241 over 99 frames.  Average acoustic like/frame is -5.65364
+LOG (lattice-to-post[5.4.10~1-f629b]:main():lattice-to-post.cc:110) Done 1 lattices.
+LOG (weight-silence-post[5.4.10~1-f629b]:main():weight-silence-post.cc:95) Done 1 posteriors.
+transform-feats exp/tri3b/final.mat ark:- ark:- 
+transform-feats exp/tri3b/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+splice-feats ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+splice-feats ark:- ark:- 
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 99 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 1 utterances; 0 had errors.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 99 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 1 utterances; 0 had errors.
+LOG (gmm-post-to-gpost[5.4.10~1-f629b]:main():gmm-post-to-gpost.cc:124) Done 1 files, 0 with no posteriors, 0 with other errors.
+LOG (gmm-post-to-gpost[5.4.10~1-f629b]:main():gmm-post-to-gpost.cc:128) Overall avg like per frame (Gaussian only) = -68.4087 over 56.4299 frames.
+LOG (gmm-post-to-gpost[5.4.10~1-f629b]:main():gmm-post-to-gpost.cc:131) Done converting post to gpost
+WARNING (gmm-est-fmllr-gpost[5.4.10~1-f629b]:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 56.43
+LOG (gmm-est-fmllr-gpost[5.4.10~1-f629b]:main():gmm-est-fmllr-gpost.cc:141) For speaker dinhky, auxf-impr from fMLLR is 0, over 56.43 frames.
+LOG (gmm-est-fmllr-gpost[5.4.10~1-f629b]:main():gmm-est-fmllr-gpost.cc:186) Done 1 files, 0 with no gposts, 0 with other errors.
+LOG (gmm-est-fmllr-gpost[5.4.10~1-f629b]:main():gmm-est-fmllr-gpost.cc:188) Overall fMLLR auxf impr per frame is 0 over 56.43 frames.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 14 09:18:30 +07 2018, elapsed time 0 seconds

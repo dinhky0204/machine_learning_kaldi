@@ -1,0 +1,18 @@
+# gmm-acc-stats-ali exp/tri3b/4.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/3/utt2spk scp:data/train/split4/3/cmvn.scp scp:data/train/split4/3/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/3/utt2spk ark:exp/tri3b/trans.3 ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri3b/ali.3.gz|" exp/tri3b/4.3.acc 
+# Started at Wed Mar 14 09:18:14 +07 2018
+#
+gmm-acc-stats-ali exp/tri3b/4.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/3/utt2spk scp:data/train/split4/3/cmvn.scp scp:data/train/split4/3/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/3/utt2spk ark:exp/tri3b/trans.3 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri3b/ali.3.gz|' exp/tri3b/4.3.acc 
+transform-feats exp/tri2b_ali/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:data/train/split4/3/utt2spk ark:exp/tri3b/trans.3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/3/utt2spk scp:data/train/split4/3/cmvn.scp scp:data/train/split4/3/feats.scp ark:- 
+splice-feats ark:- ark:- 
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 9 utterances, errors on 0
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -46.188 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average logdet is 4.13399 over 920 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 9 utterances; 0 had errors.
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:112) Done 9 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -69.2446 over 920 frames.
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 14 09:18:14 +07 2018, elapsed time 0 seconds
