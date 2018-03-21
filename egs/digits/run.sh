@@ -6,7 +6,7 @@ export LC_ALL=C
 
 nj=1       # number of parallel jobs - 1 is perfect for such a small data set
 lm_order=1 # language model order (n-gram quantity) - 1 is enough for digits grammar
-nt=4
+nt=1
 
 # Safety mechanism (possible running this script with modified arguments)
 . utils/parse_options.sh || exit 1
@@ -140,6 +140,14 @@ steps/train_deltas.sh --cmd "$train_cmd" 2500 15000 data/train data/lang exp/tri
 utils/mkgraph.sh data/lang exp/tri2a exp/tri2a/graph
 steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri2a exp/tri2a_ali || exit 1
 
+# echo
+# echo "===== TRI2A DECODE ====="
+# echo 
+
+# steps/decode.sh --scoring-opts "--min-lmw $min_lmw --max-lmw $max_lmw" --config common/decode.conf --nj $njobs --cmd "$decode_cmd" $EXP/tri2a/graph_
+# ${lm} $WORK/$tgt_dir $EXP/tri2a/decode_${tgt_dir}
+# steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri2a/graph data/test exp/tri2a/decode || exit 1
+
 # for tri2b training
 echo
 echo "===== TRANING TRI2B ====="
@@ -150,6 +158,17 @@ steps/train_lda_mllt.sh --cmd "$train_cmd" 2000 20000 data/train data/lang  exp/
 utils/mkgraph.sh data/lang exp/tri2b exp/tri2b/graph
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2b/decode
 steps/align_si.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_ali || exit 1
+
+# for train tri2b_mmi
+echo
+echo "===== TRAINING TRI2B_MMI ====="
+echo
+steps/make_denlats.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_denlats || exit 1
+steps/train_mmi.sh data/train data/lang exp/tri2b_ali exp/tri2b_denlats exp/tri2b_mmi || exit 1
+
+# for training tri2b_bmmi
+steps/train_mmi.sh data/train data/lang exp/tri2b_ali exp/tri2b_denlats exp/tri2b_mmi_b || exit 1
+steps/train_mpe.sh data/train data/lang exp/tri2b_ali exp/tri2b_denlats exp/tri2b_mpe || exit 1
 
 # for tri3b training
 echo
@@ -168,8 +187,16 @@ steps/align_fmllr.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri3b 
 #for training triphone SGMM
 echo
 echo "===== TRAINING TRI SGMM ====="
+echo
 steps/train_ubm.sh --cmd "$train_cmd" 200 data/train data/lang exp/tri3b_ali exp/ubm4
 steps/train_sgmm2.sh --cmd "$train_cmd" 7000 9000 data/train data/lang exp/tri3b_ali exp/ubm4/final.ubm exp/sgmm2
+
+# echo
+# echo "===== DECODE SGMM ====="
+# echo
+
+# utils/mkgraph.sh data/lang exp/sgmm2 exp/sgmm2/graph || exit
+# steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/sgmm2/graph data/test exp/sgmm2/decode || exit 1
 
 # for dnn training, run the follow scripts
 # echo
@@ -187,7 +214,7 @@ echo
 
 dnn_mem_reqs="mem_free=4.0G,ram_free=0.2G"
 dnn_extra_opts="--num_epochs 20 --num-epochs-extra 10 --add-layers-period 1 --shrink-interval 3"
-steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.02 --final-learning-rate 0.004 --num-hidden-layers 2 --num-jobs-nnet 2 --cmd "$train_cmd" "${dnn_train_extra_opts[@]}" --num-threads 2 --samples-per-iter 200000 data/train data/lang exp/tri3b_ali exp/tri4_DNN
+steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.02 --final-learning-rate 0.004 --num-hidden-layers 1 --num-jobs-nnet 1 --cmd "$train_cmd" "${dnn_train_extra_opts[@]}" --num-threads 1 data/train data/lang exp/tri3b_ali exp/tri4_DNN
 
 # local/run_raw_fmllr.sh
 # local/nnet2/run_4a.sh
@@ -195,3 +222,13 @@ steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.02 --final-lea
 echo
 echo "===== run.sh script is finished ====="
 echo
+
+# for lm in $LMs ; do
+# lm=`basename "$lm"`
+# utils/mkgraph.sh --mono data/lang_${lm} exp/mono exp/mono/graph_${lm} || exit 1
+# utils/mkgraph.sh data/lang_${lm} exp/tri1 exp/tri1/graph_${lm} || exit 1
+# utils/mkgraph.sh data/lang_${lm} exp/tri2a exp/tri2a/graph_${lm} || exexp
+# utils/mkgraph.sh data/lang_${lm} exp/tri2b exp/tri2b/graph_${lm} || exexp
+# utils/mkgraph.sh data/lang_${lm} exp/tri3 exp/tri3/graph_${lm} || exitexptils/mkgrapeexpWORK/lang_$eexpEXP/sgmm2_mmi_b0.1/graph_${lm} || exp
+# exp/sgmm2_mmi_b0.1
+# done

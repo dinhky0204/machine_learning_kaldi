@@ -1,0 +1,14 @@
+# lattice-scale --inv-acoustic-scale=12 "ark:gunzip -c exp/tri2b_mmi/decode_it4/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri2b/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri2b/graph/words.txt | local/wer_hyp_filter > exp/tri2b_mmi/decode_it4/scoring_kaldi/penalty_1.0/12.txt 
+# Started at Tue Mar 20 10:41:50 +07 2018
+#
+lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
+lattice-scale --inv-acoustic-scale=12 'ark:gunzip -c exp/tri2b_mmi/decode_it4/lat.*.gz|' ark:- 
+lattice-best-path --word-symbol-table=exp/tri2b/graph/words.txt ark:- ark,t:- 
+LOG (lattice-scale[5.4.10~1-f629b]:main():lattice-scale.cc:90) Done 1 lattices.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-Ky1, best cost 21.0713 + 709.736 = 730.808 over 99 frames.
+dinhky-Ky1 mo86t <UNK> 
+LOG (lattice-add-penalty[5.4.10~1-f629b]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 1 lattices.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:124) Overall cost per frame is 7.3819 = 0.212842 [graph] + 7.16905 [acoustic] over 99 frames.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:128) Done 1 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Tue Mar 20 10:41:50 +07 2018, elapsed time 0 seconds

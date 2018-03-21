@@ -1,73 +1,67 @@
 #!/bin/bash
 
-. cmd.sh
+
+steps/align_raw_fmllr.sh --nj 10 --cmd "$train_cmd" --use-graphs true \
+    data/train_si84 data/lang exp/tri2b exp/tri2b_ali_si84_raw
+
+steps/train_raw_sat.sh --cmd "$train_cmd" \
+   2500 15000 data/train_si84 data/lang exp/tri2b_ali_si84_raw exp/tri3c || exit 1;
 
 
-nj=1         # number of parallel jobs - 1 is perfect for such a small data set
-nt=16
+mfccdir=mfcc
+for x in test_eval92 test_eval93 test_dev93 ; do
+  y=${x}_utt
+  mkdir -p data/$y
+  cp -r data/$x/* data/$y
+  cat data/$x/utt2spk | awk '{print $1, $1;}' > data/$y/utt2spk;
+  cp data/$y/utt2spk data/$y/spk2utt;
+  steps/compute_cmvn_stats.sh data/$y exp/make_mfcc/$y $mfccdir || exit 1; 
+done
 
-steps/align_raw_fmllr.sh --nj $nt --cmd "$train_cmd" --use-graphs true \
-    data/train data/lang exp/tri2b exp/tri2b_ali_raw
+(
+utils/mkgraph.sh data/lang_test_tgpr exp/tri3c exp/tri3c/graph_tgpr || exit 1;
+steps/decode_raw_fmllr.sh --nj 10 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_dev93 exp/tri3c/decode_tgpr_dev93 || exit 1;
+steps/decode_raw_fmllr.sh --nj 8 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_eval92 exp/tri3c/decode_tgpr_eval92 || exit 1;
 
-steps/train_raw_sat.sh 1800 9000 data/train data/lang exp/tri2b_ali_raw exp/tri3c || exit 1;
+steps/decode_raw_fmllr.sh --nj 30 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_dev93_utt exp/tri3c/decode_tgpr_dev93_utt || exit 1;
+steps/decode_raw_fmllr.sh --nj 30 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_eval92_utt exp/tri3c/decode_tgpr_eval92_utt || exit 1;
 
-utils/mkgraph.sh data/lang exp/tri3c exp/tri3c/graph
-utils/mkgraph.sh data/lang_ug exp/tri3c exp/tri3c/graph_ug
+steps/decode_raw_fmllr.sh --use-normal-fmllr true --nj 10 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_dev93 exp/tri3c/decode_tgpr_dev93_2fmllr || exit 1;
+steps/decode_raw_fmllr.sh --use-normal-fmllr true --nj 8 --cmd "$decode_cmd" \
+  exp/tri3c/graph_tgpr data/test_eval92 exp/tri3c/decode_tgpr_eval92_2fmllr || exit 1;
+)&
 
-steps/decode_raw_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-   exp/tri3c/graph data/test exp/tri3c/decode
+(
+utils/mkgraph.sh data/lang_test_bd_tgpr exp/tri3c exp/tri3c/graph_bd_tgpr || exit 1; 
 
-#steps/decode_raw_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-#   exp/tri3c/graph_ug data/test exp/tri3c/decode_ug
+steps/decode_raw_fmllr.sh --cmd "$decode_cmd" --nj 8 exp/tri3c/graph_bd_tgpr \
+    data/test_eval92 exp/tri3c/decode_bd_tgpr_eval92 
+ steps/decode_raw_fmllr.sh --cmd "$decode_cmd" --nj 10 exp/tri3c/graph_bd_tgpr \
+   data/test_dev93 exp/tri3c/decode_bd_tgpr_dev93 
+)&
 
-steps/decode_raw_fmllr.sh --use-normal-fmllr true --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-   exp/tri3c/graph data/test exp/tri3c/decode_2fmllr
-
-#steps/decode_raw_fmllr.sh --use-normal-fmllr true --config conf/decode.config --nj $nt --cmd "$decode_cmd" \
-#   exp/tri3c/graph_ug data/test exp/tri3c/decode_2fmllr_ug
-
-steps/align_raw_fmllr.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri3c exp/tri3c_ali
-
-
-                                        
-                                                                    
-if [ ! -f exp/ubm4c/final.mdl ]; then
-  steps/train_ubm.sh --silence-weight 0.5 --cmd "$train_cmd" 400 data/train data/lang exp/tri3c_ali exp/ubm4c || exit 1;
-fi
-steps/train_sgmm2.sh  --cmd "$train_cmd" 5000 7000 data/train data/lang exp/tri3c_ali exp/ubm4c/final.ubm exp/sgmm2_4c || exit 1;
-
-utils/mkgraph.sh data/lang exp/sgmm2_4c exp/sgmm2_4c/graph || exit 1;
-#utils/mkgraph.sh data/lang_ug exp/sgmm2_4c exp/sgmm2_4c/graph_ug || exit 1;
-
-steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-  --transform-dir exp/tri3c/decode  exp/sgmm2_4c/graph data/test exp/sgmm2_4c/decode || exit 1;
-
-#steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-#  --transform-dir exp/tri3c/decode_ug  exp/sgmm2_4c/graph_ug data/test exp/sgmm2_4c/decode_ug || exit 1;
-
-steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj 20 --cmd "$decode_cmd" \
-  --transform-dir exp/tri3c/decode  exp/sgmm2_4c/graph data/test exp/sgmm2_4c/decode_fmllr || exit 1;
- 
-
-exit 0;
+steps/align_fmllr.sh --nj 20 --cmd "$train_cmd" \
+  data/train_si284 data/lang exp/tri3c exp/tri3c_ali_si284 || exit 1;
 
 
-# (# get scaled-by-30 versions of the vecs to be used for nnet training.
-#   . path.sh 
-#   mkdir -p exp/sgmm2_4c_x30
-#   cat exp/sgmm2_4c/vecs.* | copy-vector ark:- ark,t:- | \
-#    awk -v scale=30.0 '{printf("%s [ ", $1); for (n=3;n<NF;n++) { printf("%f ", scale*$n); } print "]"; }' > exp/sgmm2_4c_x30/vecs.1
-#   mkdir -p exp/sgmm2_4c_x30/decode
-#   cat exp/sgmm2_4c/decode/vecs.* | copy-vector ark:- ark,t:- | \
-#    awk -v scale=30.0 '{printf("%s [ ", $1); for (n=3;n<NF;n++) { printf("%f ", scale*$n); } print "]"; }' > exp/sgmm2_4c_x30/decode/vecs.1
-#   mkdir -p exp/sgmm2_4c_x30/decode_ug
-#   cat exp/sgmm2_4c/decode_ug/vecs.* | copy-vector ark:- ark,t:- | \
-#    awk -v scale=30.0 '{printf("%s [ ", $1); for (n=3;n<NF;n++) { printf("%f ", scale*$n); } print "]"; }' > exp/sgmm2_4c_x30/decode_ug/vecs.1
-# )
-# exit 0;
-# ## 
-# steps/decode_sgmm2.sh --config conf/decode.config --nj 20 --cmd "$decode_cmd" \
-#   exp/sgmm2_4c.no_transform/graph data/test exp/sgmm2_4c.no_transform/decode || exit 1;
+steps/train_raw_sat.sh  --cmd "$train_cmd" \
+  4200 40000 data/train_si284 data/lang exp/tri3c_ali_si284 exp/tri4d || exit 1;
+(
+ utils/mkgraph.sh data/lang_test_tgpr exp/tri4d exp/tri4d/graph_tgpr || exit 1;
+ steps/decode_raw_fmllr.sh --nj 10 --cmd "$decode_cmd" \
+   exp/tri4d/graph_tgpr data/test_dev93 exp/tri4d/decode_tgpr_dev93 || exit 1;
+ steps/decode_raw_fmllr.sh --nj 8 --cmd "$decode_cmd" \
+   exp/tri4d/graph_tgpr data/test_eval92 exp/tri4d/decode_tgpr_eval92 || exit 1;
+) & 
 
-# steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj 20 --cmd "$decode_cmd" \
-#   exp/sgmm2_4c.no_transform/graph data/test exp/sgmm2_4c.no_transform/decode_fmllr || exit 1;
+
+wait
+
+
+#for x in exp/tri3{b,c}/decode_tgpr*; do grep WER $x/wer_* | utils/best_wer.sh ; done
+

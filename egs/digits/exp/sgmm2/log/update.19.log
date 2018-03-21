@@ -1,258 +1,143 @@
 # sgmm2-est --update-flags=vNwSctu --split-substates=8995 --power=0.25 --write-occs=exp/sgmm2/20.occs exp/sgmm2/19.mdl "sgmm2-sum-accs - exp/sgmm2/19.*.acc|" exp/sgmm2/20.mdl 
-# Started at Wed Mar 14 09:18:59 +07 2018
+# Started at Tue Mar 20 10:31:52 +07 2018
 #
 sgmm2-est --update-flags=vNwSctu --split-substates=8995 --power=0.25 --write-occs=exp/sgmm2/20.occs exp/sgmm2/19.mdl 'sgmm2-sum-accs - exp/sgmm2/19.*.acc|' exp/sgmm2/20.mdl 
-sgmm2-sum-accs - exp/sgmm2/19.1.acc exp/sgmm2/19.2.acc exp/sgmm2/19.3.acc exp/sgmm2/19.4.acc 
+sgmm2-sum-accs - exp/sgmm2/19.1.acc 
 LOG (sgmm2-sum-accs[5.4.10~1-f629b]:main():sgmm2-sum-accs.cc:84) Written stats to -
-LOG (sgmm2-est[5.4.10~1-f629b]:MleUpdate():transition-model.cc:517) TransitionModel::Update, objf change is 0 per frame over 6060 frames. 
-LOG (sgmm2-est[5.4.10~1-f629b]:MleUpdate():transition-model.cc:520) 9 probabilities floored, 394 out of 470 transition-states skipped due to insuffient data (it is normal to have some skipped.)
-LOG (sgmm2-est[5.4.10~1-f629b]:main():sgmm2-est.cc:109) Transition model update: Overall 0 log-like improvement per frame over 6060 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:Check():estimate-am-sgmm2.cc:216) Sgmm2PdfModel: J1 = 104, J2 = 110, D = 40, S = 41, T = 40, I = 1
-LOG (sgmm2-est[5.4.10~1-f629b]:Check():estimate-am-sgmm2.cc:362) Subspace GMM model properties: Y: yes, nonzero. Z: yes, nonzero. R: yes, nonzero. gamma_s: yes, zero. S: yes, nonzero. y: yes, nonzero. a: yes.  a: yes, nonzero. gamma: yes.  gamma: yes, nonzero. gamma_c: yes, nonzero. t: yes, zero. t: yes, nonzero. 
+LOG (sgmm2-est[5.4.10~1-f629b]:MleUpdate():transition-model.cc:517) TransitionModel::Update, objf change is 0 per frame over 8610 frames. 
+LOG (sgmm2-est[5.4.10~1-f629b]:MleUpdate():transition-model.cc:520) 8 probabilities floored, 315 out of 370 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (sgmm2-est[5.4.10~1-f629b]:main():sgmm2-est.cc:109) Transition model update: Overall 0 log-like improvement per frame over 8610 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:Check():estimate-am-sgmm2.cc:216) Sgmm2PdfModel: J1 = 80, J2 = 86, D = 40, S = 41, T = 40, I = 10
+LOG (sgmm2-est[5.4.10~1-f629b]:Check():estimate-am-sgmm2.cc:362) Subspace GMM model properties: Y: yes, nonzero. Z: yes, nonzero. R: yes, nonzero. gamma_s: yes, zero. S: yes, nonzero. y: yes, nonzero. a: yes.  a: yes, nonzero. gamma: yes.  gamma: yes, nonzero. gamma_c: yes, nonzero. t: yes, nonzero. t: yes, nonzero. 
 WARNING (sgmm2-est[5.4.10~1-f629b]:ComputeLogA():estimate-am-sgmm2.cc:834) 1 sub-states with zero "a" (and presumably gamma) stats.
 LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectors():estimate-am-sgmm2.cc:788) Updating phone vectors
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 0 is 0.0410588 per frame over 34.2152 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 1 is 0.0358008 per frame over 46.5649 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 2 is 0.0259899 per frame over 49.4743 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 0 is 0.0649248 per frame over 20.8593 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 7 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 1 is 0.0200417 per frame over 42.6112 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 0 m = 2 is 0.0642306 per frame over 23.3068 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 2 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 9 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 8 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 5 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 8 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 4 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 5 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 9 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 4 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 2 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 7 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 3 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 2 eigenvalues. 
 LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
 LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
 WARNING (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:643) Zero quadratic term in quadratic vector problem for v: leaving it unchanged.
 LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 1 m = 0 is -nan per frame over 0 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 2 m = 0 is 0.00740843 per frame over 13 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 1 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectors():estimate-am-sgmm2.cc:800) **Overall auxf impr for v is 0.0196772 over 6046.18 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectorsInternal():estimate-am-sgmm2.cc:934) Auxf impr for j = 2 m = 0 is 0.0410298 per frame over 13 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 4 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 6 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 7 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v: floored 5 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdatePhoneVectors():estimate-am-sgmm2.cc:800) **Overall auxf impr for v is 0.0420533 over 8608.27 frames
 LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1325) Updating weight projections
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 0 is 7.27984e-16 per frame over 6046.18 frames.
-WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1407) Not updating weights as not increasing auxf and probably due to numerical issues (since small change).
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 0 is 7.27984e-16 per frame over 6046.18 frames.
-WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1407) Not updating weights as not increasing auxf and probably due to numerical issues (since small change).
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 0 is 7.27984e-16 per frame over 6046.18 frames.
-WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1407) Not updating weights as not increasing auxf and probably due to numerical issues (since small change).
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1433) **Overall objf impr for w is 2.18392e-15, actual 0, over 6046.18 frames
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1675) **Overall objf impr for variance update = 0.00181627 over 6046.18 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 0 is 0.00326231 per frame over 118 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 1 is 0.000657739 per frame over 320.936 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 2 is 0.00158331 per frame over 140 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 3 is 0.000490166 per frame over 905.815 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 4 is 0.00278305 per frame over 139 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 5 is 0.000387624 per frame over 1473.83 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 6 is 0.00132218 per frame over 204 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 7 is 0.000175004 per frame over 3423.48 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for w: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 8 is 0.00565535 per frame over 109.977 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 0, i = 9 is 0.000153137 per frame over 1773.23 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 0 is 0.000566034 per frame over 118 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 1 is 9.62451e-05 per frame over 320.936 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 2 is 0.000413423 per frame over 140 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 3 is 3.97574e-05 per frame over 905.815 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 4 is 0.00063074 per frame over 139 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 5 is 3.5811e-05 per frame over 1473.83 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 6 is 9.63411e-05 per frame over 204 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 7 is 1.81663e-05 per frame over 3423.48 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for w: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 8 is 0.0011927 per frame over 109.977 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 1, i = 9 is 3.88323e-05 per frame over 1773.23 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 0 is 0.000118667 per frame over 118 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 1 is 4.05986e-05 per frame over 320.936 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 2 is 0.000190869 per frame over 140 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 3 is 1.58281e-05 per frame over 905.815 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 4 is 0.000153441 per frame over 139 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 5 is 1.23102e-05 per frame over 1473.83 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 6 is 3.0921e-05 per frame over 204 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 7 is 1.03039e-05 per frame over 3423.48 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for w: floored 1 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 8 is 0.00077556 per frame over 109.977 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1379) Predicted objf impr for w, iter = 2, i = 9 is 2.35348e-05 per frame over 1773.23 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateW():estimate-am-sgmm2.cc:1433) **Overall objf impr for w is 0.000565999, actual 0.000707267, over 8608.27 frames
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 0: Floored 31 covariance eigenvalues.
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 1: Floored 11 covariance eigenvalues.
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 2: Floored 28 covariance eigenvalues.
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 4: Floored 23 covariance eigenvalues.
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 6: Floored 19 covariance eigenvalues.
+WARNING (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1649) For Gaussian component 8: Floored 30 covariance eigenvalues.
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateVars():estimate-am-sgmm2.cc:1675) **Overall objf impr for variance update = 0.00805649 over 8608.27 frames
 LOG (sgmm2-est[5.4.10~1-f629b]:UpdateSubstateWeights():estimate-am-sgmm2.cc:1684) Updating substate mixture weights
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateSubstateWeights():estimate-am-sgmm2.cc:1707) **Overall objf impr for c is 0.00135941, over 6046.18 frames.
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 37 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 0, is 0.00182206 over 6046.18 frames
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1520) **Overall objf impr for N is 0.00182206 over 6046.18 frames
-LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 37 eigenvalues. 
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 0, is 0 over 6046.18 frames
-LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1481) **Overall objf impr for u is 0, over 6046.18 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateSubstateWeights():estimate-am-sgmm2.cc:1707) **Overall objf impr for c is 0.000349958, over 8608.27 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 0, is 0.00765952 over 118 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 1, is 0.00521459 over 320.936 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 2, is 0.00760674 over 140 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 3, is 0.00142339 over 905.815 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 4, is 0.00900448 over 139 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 5, is 0.00145533 over 1473.83 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 6, is 0.00377456 over 204 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 7, is 0.000506033 over 3423.48 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 8, is 0.0206293 over 109.977 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticMatrixProblem():sp-matrix.cc:786) Solving matrix problem for N: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1512) Objf impr for spk projection N for i = 9, is 0.00207924 over 1773.23 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateN():estimate-am-sgmm2.cc:1520) **Overall objf impr for N is 0.00195002 over 8608.27 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1450) Count is small 118 for gaussian 0, not updating u_i.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 1, is 0.000149285 over 320.936 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1450) Count is small 140 for gaussian 2, not updating u_i.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 3, is 0.000285784 over 905.815 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1450) Count is small 139 for gaussian 4, not updating u_i.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 5, is 3.71773e-05 over 1473.83 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 6, is 1.14209e-05 over 204 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 7, is 5.34227e-05 over 3423.48 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1450) Count is small 109.977 for gaussian 8, not updating u_i.
+LOG (sgmm2-est[5.4.10~1-f629b]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for u: floored 39 eigenvalues. 
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1473) Objf impr for spk weight-projection u for i = 9, is 2.60787e-06 over 1773.23 frames
+LOG (sgmm2-est[5.4.10~1-f629b]:UpdateU():estimate-am-sgmm2.cc:1481) **Overall objf impr for u is 6.40567e-05, over 8608.27 frames
 LOG (sgmm2-est[5.4.10~1-f629b]:RenormalizeV():estimate-am-sgmm2.cc:969) Scatter of vectors v is : 
-LOG (sgmm2-est[5.4.10~1-f629b]:PrintEigs():matrix/sp-matrix.h:207) PrintEigs: Sigma:  [ 1.22892 1.12614 1.08038 1.07202 1.05484 1.05063 1.0385 1.03391 1.02944 1.0188 1.01737 1.01196 1.01093 1.00932 1.00781 1.00667 1.00407 1.00334 1.00177 1.0008 0.99985 0.998456 0.997659 0.997448 0.996057 0.994328 0.992187 0.985914 0.985096 0.982587 0.978922 0.972497 0.96559 0.960407 0.955965 0.949765 0.903068 0.909019 0.928912 0.931663 0.922588 ]
+LOG (sgmm2-est[5.4.10~1-f629b]:PrintEigs():matrix/sp-matrix.h:207) PrintEigs: Sigma:  [ 1.21482 1.19801 1.16981 1.14087 1.13879 1.1081 0.856577 1.09468 1.08454 1.07364 0.88163 0.89448 1.05374 0.914245 1.04104 1.03546 1.02513 1.02023 1.01625 1.01715 1.01232 1.0067 1.00334 1.00146 0.997983 0.995317 0.990672 0.987516 0.986124 0.981023 0.982011 0.977492 0.969851 0.968476 0.961859 0.960934 0.957565 0.951687 0.945052 0.933087 0.930607 ]
 LOG (sgmm2-est[5.4.10~1-f629b]:RenormalizeV():estimate-am-sgmm2.cc:991) Note on the next diagnostic: the first number is generally not that meaningful as it relates to the static offset
-LOG (sgmm2-est[5.4.10~1-f629b]:PrintEigs():matrix/sp-matrix.h:207) PrintEigs: H_sm_proj (Significance of dims in vector space.. note):  [ 10.0539 5.57827 3.86948 3.14041 2.48415 2.21567 1.90435 1.71641 1.56262 1.2554 1.31699 1.06187 0.913299 0.84828 0.68253 0.661915 0.597773 0.532414 0.511372 0.461614 0.434346 0.396258 9.8682e-11 0.346972 0.341765 0.332763 0.0730543 0.0768149 0.084575 0.0924419 0.26659 0.259093 0.107343 0.124309 0.133278 0.144555 0.161581 0.186883 0.234057 0.219891 0.199261 ]
+LOG (sgmm2-est[5.4.10~1-f629b]:PrintEigs():matrix/sp-matrix.h:207) PrintEigs: H_sm_proj (Significance of dims in vector space.. note):  [ 19091.7 4352.44 2843.65 2055.35 1591.44 1384.56 1147.31 925.988 640.934 626.001 567.515 485.289 449.954 376.461 281.578 252.078 210.134 190.522 166.728 142.708 154.863 113.052 100.359 82.466 75.2905 68.1362 56.5246 51.5393 45.8894 38.2269 9.31704 10.063 13.5394 14.4218 15.1335 17.5907 20.5822 31.9967 28.3226 23.1225 26.0262 ]
 LOG (sgmm2-est[5.4.10~1-f629b]:RenormalizeV():estimate-am-sgmm2.cc:1037) Renormalized subspace.
-LOG (sgmm2-est[5.4.10~1-f629b]:Update():estimate-am-sgmm2.cc:673) *Overall auxf improvement, combining all parameters, is 0.024675
-LOG (sgmm2-est[5.4.10~1-f629b]:Update():estimate-am-sgmm2.cc:676) ***Overall data likelihood is -68.7432 over 6046.18 frames.
+LOG (sgmm2-est[5.4.10~1-f629b]:Update():estimate-am-sgmm2.cc:673) *Overall auxf improvement, combining all parameters, is 0.0531811
+LOG (sgmm2-est[5.4.10~1-f629b]:Update():estimate-am-sgmm2.cc:676) ***Overall data likelihood is -56.3184 over 8608.27 frames.
 WARNING (sgmm2-est[5.4.10~1-f629b]:GetSplitTargets():model-common.cc:134) Could not split up to 8995 due to min-count = 40 (or no counts at all)
-WARNING (sgmm2-est[5.4.10~1-f629b]:ComputeHsmFromModel():am-sgmm2.cc:1289) Limited 5 eigenvalues of H_sm
-LOG (sgmm2-est[5.4.10~1-f629b]:ComputeHsmFromModel():am-sgmm2.cc:1294) total count is 6046.18
-LOG (sgmm2-est[5.4.10~1-f629b]:SplitSubstates():am-sgmm2.cc:688) Not splitting substates; current #substates is 205 and target is 8995
+WARNING (sgmm2-est[5.4.10~1-f629b]:ComputeHsmFromModel():am-sgmm2.cc:1289) Limited 24 eigenvalues of H_sm
+LOG (sgmm2-est[5.4.10~1-f629b]:ComputeHsmFromModel():am-sgmm2.cc:1294) total count is 8608.27
+LOG (sgmm2-est[5.4.10~1-f629b]:SplitSubstates():am-sgmm2.cc:688) Not splitting substates; current #substates is 251 and target is 8995
 LOG (sgmm2-est[5.4.10~1-f629b]:ComputeNormalizers():am-sgmm2.cc:858) Computing normalizers
-LOG (sgmm2-est[5.4.10~1-f629b]:ComputeNormalizers():am-sgmm2.cc:865) Entropy of weights in substates is 0 over 205 substates, equivalent to perplexity of 1
+LOG (sgmm2-est[5.4.10~1-f629b]:ComputeNormalizers():am-sgmm2.cc:865) Entropy of weights in substates is 1.04261 over 251 substates, equivalent to perplexity of 2.8366
 LOG (sgmm2-est[5.4.10~1-f629b]:ComputeNormalizers():am-sgmm2.cc:869) Done computing normalizers
 LOG (sgmm2-est[5.4.10~1-f629b]:main():sgmm2-est.cc:158) Written model to exp/sgmm2/20.mdl
 # Accounting: time=0 threads=1
-# Ended (code 0) at Wed Mar 14 09:18:59 +07 2018, elapsed time 0 seconds
+# Ended (code 0) at Tue Mar 20 10:31:52 +07 2018, elapsed time 0 seconds

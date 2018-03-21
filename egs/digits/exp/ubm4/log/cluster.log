@@ -1,8 +1,9 @@
 # init-ubm --intermediate-num-gauss=2000 --ubm-num-gauss=200 --verbose=2 --fullcov-ubm=true exp/tri3b_ali/final.mdl exp/tri3b_ali/final.occs exp/ubm4/0.ubm 
-# Started at Wed Mar 14 09:18:34 +07 2018
+# Started at Tue Mar 20 10:29:57 +07 2018
 #
 init-ubm --intermediate-num-gauss=2000 --ubm-num-gauss=200 --verbose=2 --fullcov-ubm=true exp/tri3b_ali/final.mdl exp/tri3b_ali/final.occs exp/ubm4/0.ubm 
 VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:229) Merging densities to 1 Gaussian per state.
+VLOG[2] (init-ubm[5.4.10~1-f629b]:Merge():diag-gmm.cc:301) No components merged, as target (1) = total.
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Merge():diag-gmm.cc:301) No components merged, as target (1) = total.
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Merge():diag-gmm.cc:301) No components merged, as target (1) = total.
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Merge():diag-gmm.cc:301) No components merged, as target (1) = total.
@@ -20,10 +21,10 @@ VLOG[2] (init-ubm[5.4.10~1-f629b]:Cluster():cluster-utils.cc:263) Renumbering cl
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Renumber():cluster-utils.cc:269) Freeing up distance vector.
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Renumber():cluster-utils.cc:288) Creating new copy of non-NULL clusters.
 VLOG[2] (init-ubm[5.4.10~1-f629b]:Renumber():cluster-utils.cc:302) Creating new copy of assignments.
-WARNING (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:283) Intermediate num_gauss 2000 is more than num-gauss 284, reducing it to 284
-VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:297) Merging from 284 Gaussians in the acoustic model, down to 284 Gaussians.
-VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:308) Putting 284 Gaussians into a single GMM for final merge step.
+WARNING (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:283) Intermediate num_gauss 2000 is more than num-gauss 411, reducing it to 411
+VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:297) Merging from 411 Gaussians in the acoustic model, down to 411 Gaussians.
+VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:308) Putting 411 Gaussians into a single GMM for final merge step.
 VLOG[1] (init-ubm[5.4.10~1-f629b]:ClusterGaussiansToUbm():am-diag-gmm.cc:342) Merged down to 200 Gaussians.
 LOG (init-ubm[5.4.10~1-f629b]:main():init-ubm.cc:88) Written UBM to exp/ubm4/0.ubm
-# Accounting: time=0 threads=1
-# Ended (code 0) at Wed Mar 14 09:18:34 +07 2018, elapsed time 0 seconds
+# Accounting: time=2 threads=1
+# Ended (code 0) at Tue Mar 20 10:29:59 +07 2018, elapsed time 2 seconds
