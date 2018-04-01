@@ -1,17 +1,195 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2b/graph/words.txt exp/tri2b/final.mdl exp/tri2b/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2b/decode/lat.1.gz" 
-# Started at Tue Mar 20 10:41:54 +07 2018
+# Started at Sat Mar 31 17:18:28 +07 2018
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2b/graph/words.txt exp/tri2b/final.mdl exp/tri2b/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri2b/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2b/decode/lat.1.gz' 
 transform-feats exp/tri2b/final.mat ark:- ark:- 
-splice-feats ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
-LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -48.2993 over 99 frames.
-LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 1 utterances; 0 had errors.
-dinhky-Ky1 mo86t <UNK> 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-Ky1 is -7.3613 over 99 frames.
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:176) Time taken 0.216316s: real-time factor assuming 100 frames/sec is 0.218501
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:179) Done 1 utterances, failed for 0
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.3613 over 99 frames.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Tue Mar 20 10:41:54 +07 2018, elapsed time 0 seconds
+splice-feats ark:- ark:- 
+phase1-Ky-1 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-1 is -6.8409 over 251 frames.
+phase1-Ky-2 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-2 is -6.13506 over 254 frames.
+phase1-Ky-3 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-3 is -6.05445 over 224 frames.
+phase1-Ky-4 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-4 is -6.13799 over 261 frames.
+phase1-Ky-5 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-5 is -6.21336 over 231 frames.
+phase1-Ky-6 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-6 is -6.64365 over 203 frames.
+phase1-Ky-7 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-7 is -6.40255 over 235 frames.
+phase1-Ky-8 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-8 is -6.21233 over 251 frames.
+phase1-Ky-9 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase1-Ky-9 is -6.04653 over 258 frames.
+phase10-Ky-1 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-1 is -6.18372 over 251 frames.
+phase10-Ky-2 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-2 is -6.24379 over 238 frames.
+phase10-Ky-3 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-3 is -5.92164 over 275 frames.
+phase10-Ky-4 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-4 is -6.14191 over 251 frames.
+phase10-Ky-5 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-5 is -6.0851 over 221 frames.
+phase10-Ky-6 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-6 is -6.54039 over 238 frames.
+phase10-Ky-7 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-7 is -5.97495 over 261 frames.
+phase10-Ky-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-8 is -6.48704 over 275 frames.
+phase10-Ky-9 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase10-Ky-9 is -6.2677 over 254 frames.
+phase2-Ky-1 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-1 is -6.55631 over 233 frames.
+phase2-Ky-2 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-2 is -6.36081 over 214 frames.
+phase2-Ky-3 <UNK> mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-3 is -6.4894 over 219 frames.
+phase2-Ky-4 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-4 is -6.53335 over 224 frames.
+phase2-Ky-5 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-5 is -6.00465 over 247 frames.
+phase2-Ky-6 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-6 is -6.39741 over 212 frames.
+phase2-Ky-7 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-7 is -6.13818 over 228 frames.
+phase2-Ky-8 mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-8 is -6.24599 over 235 frames.
+phase2-Ky-9 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase2-Ky-9 is -6.13724 over 265 frames.
+phase3-Ky-1 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-1 is -6.23701 over 231 frames.
+phase3-Ky-2 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-2 is -6.85457 over 244 frames.
+phase3-Ky-3 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-3 is -6.22221 over 238 frames.
+phase3-Ky-4 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-4 is -6.07378 over 249 frames.
+phase3-Ky-5 mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-5 is -7.31826 over 228 frames.
+phase3-Ky-6 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-6 is -6.25666 over 240 frames.
+phase3-Ky-7 mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-7 is -6.35565 over 247 frames.
+phase3-Ky-8 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-8 is -5.95752 over 233 frames.
+phase3-Ky-9 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase3-Ky-9 is -6.55533 over 221 frames.
+phase4-Ky-1 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-1 is -6.47158 over 240 frames.
+phase4-Ky-2 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-2 is -6.41281 over 233 frames.
+phase4-Ky-3 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-3 is -6.18579 over 217 frames.
+phase4-Ky-4 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-4 is -6.57561 over 233 frames.
+phase4-Ky-5 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-5 is -6.0751 over 235 frames.
+phase4-Ky-6 ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-6 is -6.11074 over 270 frames.
+phase4-Ky-7 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-7 is -6.38232 over 282 frames.
+phase4-Ky-8 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-8 is -6.21409 over 235 frames.
+phase4-Ky-9 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase4-Ky-9 is -6.163 over 240 frames.
+phase5-Ky-1 ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-1 is -6.28499 over 275 frames.
+phase5-Ky-2 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-2 is -6.14271 over 240 frames.
+phase5-Ky-3 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-3 is -6.48606 over 233 frames.
+phase5-Ky-4 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-4 is -6.21712 over 235 frames.
+phase5-Ky-5 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-5 is -6.13995 over 270 frames.
+phase5-Ky-6 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-6 is -6.32551 over 275 frames.
+phase5-Ky-7 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-7 is -6.0535 over 284 frames.
+phase5-Ky-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-8 is -6.55901 over 263 frames.
+phase5-Ky-9 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase5-Ky-9 is -6.14335 over 279 frames.
+phase6-Ky-1 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-1 is -6.22129 over 244 frames.
+phase6-Ky-2 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-2 is -6.2176 over 261 frames.
+phase6-Ky-3 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-3 is -6.1043 over 289 frames.
+phase6-Ky-4 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-4 is -6.10614 over 258 frames.
+phase6-Ky-5 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-5 is -6.31315 over 247 frames.
+phase6-Ky-6 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-6 is -6.4206 over 256 frames.
+phase6-Ky-7 ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-7 is -6.12608 over 247 frames.
+phase6-Ky-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-8 is -6.43856 over 240 frames.
+phase6-Ky-9 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase6-Ky-9 is -6.17675 over 272 frames.
+phase7-Ky-1 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-1 is -6.4172 over 217 frames.
+phase7-Ky-2 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-2 is -6.15516 over 258 frames.
+phase7-Ky-3 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-3 is -6.14509 over 261 frames.
+phase7-Ky-4 <UNK> na7m bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-4 is -6.82906 over 258 frames.
+phase7-Ky-5 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-5 is -6.55933 over 247 frames.
+phase7-Ky-6 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-6 is -6.2005 over 247 frames.
+phase7-Ky-7 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-7 is -6.45785 over 226 frames.
+phase7-Ky-8 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-8 is -6.28253 over 235 frames.
+phase7-Ky-9 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase7-Ky-9 is -6.31713 over 275 frames.
+phase8-Ky-1 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-1 is -6.27025 over 235 frames.
+phase8-Ky-2 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-2 is -6.12597 over 298 frames.
+phase8-Ky-3 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-3 is -6.29203 over 263 frames.
+phase8-Ky-4 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-4 is -6.63503 over 263 frames.
+phase8-Ky-5 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-5 is -6.11953 over 263 frames.
+phase8-Ky-6 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-6 is -6.15836 over 258 frames.
+phase8-Ky-7 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-7 is -6.21562 over 231 frames.
+phase8-Ky-8 ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-8 is -5.96312 over 272 frames.
+phase8-Ky-9 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase8-Ky-9 is -6.36414 over 251 frames.
+phase9-Ky-1 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-1 is -6.192 over 256 frames.
+phase9-Ky-2 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-2 is -6.28948 over 238 frames.
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 90 utterances, errors on 0
+phase9-Ky-3 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-3 is -6.44803 over 240 frames.
+phase9-Ky-4 <UNK> na7m hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-4 is -6.84943 over 282 frames.
+phase9-Ky-5 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-5 is -6.38836 over 249 frames.
+phase9-Ky-6 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-6 is -6.47697 over 261 frames.
+phase9-Ky-7 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-7 is -6.12211 over 275 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -19.2271 over 22325 frames.
+LOG (transform-feats[5.4.10~1-f629b]:main():transform-feats.cc:161) Applied transform to 90 utterances; 0 had errors.
+phase9-Ky-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-8 is -6.21905 over 235 frames.
+phase9-Ky-9 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance phase9-Ky-9 is -6.38639 over 238 frames.
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:176) Time taken 88.4173s: real-time factor assuming 100 frames/sec is 0.396046
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:179) Done 90 utterances, failed for 0
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -6.29778 over 22325 frames.
+# Accounting: time=88 threads=1
+# Ended (code 0) at Sat Mar 31 17:19:56 +07 2018, elapsed time 88 seconds

@@ -1,22 +1,13 @@
 # gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/tri2a/10.mdl - |" "ark:gunzip -c exp/tri2a/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c >exp/tri2a/ali.1.gz" 
-# Started at Tue Mar 20 10:27:47 +07 2018
+# Started at Sat Mar 31 17:13:56 +07 2018
 #
 gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/tri2a/10.mdl - |' 'ark:gunzip -c exp/tri2a/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c >exp/tri2a/ali.1.gz' 
 gmm-boost-silence --boost=1.0 1 exp/tri2a/10.mdl - 
 WARNING (gmm-boost-silence[5.4.10~1-f629b]:main():gmm-boost-silence.cc:82) The pdfs for the silence phones may be shared by other phones (note: this probably does not matter.)
 LOG (gmm-boost-silence[5.4.10~1-f629b]:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
 LOG (gmm-boost-silence[5.4.10~1-f629b]:main():gmm-boost-silence.cc:103) Wrote model to -
-apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
 add-deltas ark:- ark:- 
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky2
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky3
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky4
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky5
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky6
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky7
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_Ky9
+apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v1_Ky1
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v1_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v1_Ky3
@@ -37,7 +28,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v2_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky1
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky2
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 36 utterances, errors on 0
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky4
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky5
@@ -45,8 +35,36 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky7
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v3_Ky9
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -69.1655 over 8610 frames.
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:137) Retried 0 out of 36 utterances.
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:139) Done 36, errors on 0
-# Accounting: time=1 threads=1
-# Ended (code 0) at Tue Mar 20 10:27:48 +07 2018, elapsed time 1 seconds
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v4_Ky9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v5_Ky9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky4
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 54 utterances, errors on 0
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky_v6_Ky9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -106.819 over 12858 frames.
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:137) Retried 0 out of 54 utterances.
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:139) Done 54, errors on 0
+# Accounting: time=2 threads=1
+# Ended (code 0) at Sat Mar 31 17:13:58 +07 2018, elapsed time 2 seconds

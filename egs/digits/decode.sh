@@ -37,12 +37,15 @@ echo
 echo "===== MONO DECODING ====="
 echo
 
+utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
+# steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
 
 echo
 echo "===== TRI1 (first triphone pass) DECODING ====="
 echo
 
+utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
 
 echo
@@ -67,41 +70,40 @@ echo
 echo "===== TRI2B DECODING ====="
 echo
 
+utils/mkgraph.sh data/lang exp/tri2b exp/tri2b/graph
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2b/decode
 
-echo
-echo "===== Tri3b [LDA+MLLT+SAT] DECODING ====="
-echo
+# echo
+# echo "===== Tri3b [LDA+MLLT+SAT] DECODING ====="
+# echo
 
-steps/decode_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-  exp/tri3b/graph data/test exp/tri3b/decode
+# utils/mkgraph.sh data/lang exp/tri3b exp/tri3b/graph
+# steps/decode_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri3b/graph data/test exp/tri3b/decode || exit 1
 
-
-echo
-echo "===== Raw_fMLLR  DECODING ====="
-echo
+# echo
+# echo "===== Raw_fMLLR  DECODING ====="
+# echo
 
 #steps/decode_raw_fmllr.sh  --config conf/decode.config --nj 1 --cmd "$decode_cmd" \
 #       exp/tri3c/graph data/test exp/tri3c/decode
 
-
-echo
-echo "===== Normal_fMLLR  DECODING ====="
-echo
+# echo
+# echo "===== Normal_fMLLR  DECODING ====="
+# echo
 
 #steps/decode_raw_fmllr.sh --use-normal-fmllr true --config conf/decode.config --nj 1 --cmd "$decode_cmd" \
 #      exp/tri3c/graph data/test exp/tri3c/decode_2fmllr
 
-echo
-echo "===== SGMM  DECODING ====="
-echo
+# echo
+# echo "===== SGMM  DECODING ====="
+# echo
 
-steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-  --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode || exit 1
+# steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
+#   --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode || exit 1
 
 
-steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-  --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode_fmllr || exit 1
+# steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
+#   --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode_fmllr || exit 1
 
 # echo
 # echo "===== DNN  DECODING ====="
@@ -110,12 +112,10 @@ steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj $nj --cm
 # utils/mkgraph.sh data/lang exp/tri4_DNN exp/tri4_DNN/graph || exit
 # steps/nnet2/decode.sh --config conf/decode.config --cmd "$decode_cmd" --nj 1 --feat-type raw --transform-dir exp/tri4_DNN/decode exp/tri4_DNN/graph data/test exp/tri4_DNN/decode_it4 | tee exp/tri4_DNN/decode_it4/decode.log || exit 
 
-
-
 # local/run_raw_fmllr.sh
 # local/nnet2/run_4a.sh
 #local/run_sgmm2.sh
 
 echo
-echo "===== run.sh script is finished ====="
+echo "===== decode.sh script is finished ====="
 echo
