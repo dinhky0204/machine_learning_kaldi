@@ -140,23 +140,23 @@ steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri2a exp
 # steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri2a/graph data/test exp/tri2a/decode || exit 1
 
 # for tri2b training
-echo
-echo "===== TRANING TRI2B ====="
-echo
+# echo
+# echo "===== TRANING TRI2B ====="
+# echo
 
-steps/train_lda_mllt.sh --cmd "$train_cmd" 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
-# steps/train_lda_mllt.sh --cmd "$train_cmd" --allow-large-dim true 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
+# steps/train_lda_mllt.sh --cmd "$train_cmd" 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
+#  steps/train_lda_mllt.sh --cmd "$train_cmd" --allow-large-dim true 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
 
-echo
-echo "===== TRI2B ALIGNMENT ====="
-echo
+# echo
+# echo "===== TRI2B ALIGNMENT ====="
+# echo
 
-steps/align_si.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_ali || exit 1
+# steps/align_si.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_ali || exit 1
 
 # for train tri2b_mmi
-echo
-echo "===== TRAINING TRI2B_MMI ====="
-echo
+# echo
+# echo "===== TRAINING TRI2B_MMI ====="
+# echo
 # steps/make_denlats.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_denlats || exit 1
 # steps/train_mmi.sh data/train data/lang exp/tri2b_ali exp/tri2b_denlats exp/tri2b_mmi || exit 1
 
@@ -165,21 +165,21 @@ echo
 # steps/train_mpe.sh data/train data/lang exp/tri2b_ali exp/tri2b_denlats exp/tri2b_mpe || exit 1
 
 # for tri3b training
-echo
-echo "===== TRANING TRI3B ====="
-echo
+# echo
+# echo "===== TRANING TRI3B ====="
+# echo
 
 # steps/train_sat.sh 1800 9000 data/train data/lang exp/tri2b_ali exp/tri3b || exit 1
 
-echo
-echo "===== ALIGMENT TRI3B ====="
-echo
+# echo
+# echo "===== ALIGMENT TRI3B ====="
+# echo
 # steps/align_fmllr.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri3b exp/tri3b_ali || exit 1
 
 #for training triphone SGMM
-echo
-echo "===== TRAINING TRI SGMM ====="
-echo
+# echo
+# echo "===== TRAINING TRI SGMM ====="
+# echo
 # steps/train_ubm.sh --cmd "$train_cmd" 200 data/train data/lang exp/tri3b_ali exp/ubm4
 # steps/train_sgmm2.sh --cmd "$train_cmd" 7000 9000 data/train data/lang exp/tri3b_ali exp/ubm4/final.ubm exp/sgmm2
 
@@ -193,17 +193,17 @@ echo
 # # steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.015 --final-learning-rate 0.002 --num-hidden-layers 2 --num-jobs-nnet $njobs --cmd "$train_cmd" "${dnn_train_extra_opts[@]}" data/train data/lang exp/tri3_ali exp/tri4_DNN
 # steps/nnet2/train_tanh.sh data/train data/lang exp/tri3b_ali exp/tri4_nnet
 
-echo
-echo "TRAINING DNN"
-echo
+# echo
+# echo "TRAINING DNN"
+# echo
 
-dnn_mem_reqs="mem_free=4.0G,ram_free=0.2G"
-dnn_extra_opts="--num_epochs 20 --num-epochs-extra 10 --add-layers-period 1 --shrink-interval 3"
-steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.02 --final-learning-rate 0.004 --num-hidden-layers 3 --num-jobs-nnet 1 --cmd "$train_cmd" "${dnn_train_extra_opts[@]}" --num-threads 1 data/train data/lang exp/tri3b_ali exp/tri4_DNN
+#dnn_mem_reqs="mem_free=4.0G,ram_free=0.2G"
+#dnn_extra_opts="--num_epochs 20 --num-epochs-extra 10 --add-layers-period 1 --shrink-interval 3"
+# steps/nnet2/train_tanh.sh --mix-up 5000 --initial-learning-rate 0.02 --final-learning-rate 0.004 --num-hidden-layers 3 --num-jobs-nnet 1 --cmd #"$train_cmd" "${dnn_train_extra_opts[@]}" --num-threads 1 data/train data/lang exp/tri3b_ali exp/tri4_DNN
 
 # local/run_raw_fmllr.sh
 # local/nnet2/run_4a.sh
 
-echo
-echo "===== run.sh script is finished ====="
-echo
+# echo
+# echo "===== run.sh script is finished ====="
+# echo

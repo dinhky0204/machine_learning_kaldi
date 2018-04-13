@@ -77,8 +77,8 @@ steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri
 # echo "===== Tri3b [LDA+MLLT+SAT] DECODING ====="
 # echo
 
-# utils/mkgraph.sh data/lang exp/tri3b exp/tri3b/graph
-# steps/decode_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri3b/graph data/test exp/tri3b/decode || exit 1
+utils/mkgraph.sh data/lang exp/tri3b exp/tri3b/graph
+steps/decode_fmllr.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri3b/graph data/test exp/tri3b/decode || exit 1
 
 # echo
 # echo "===== Raw_fMLLR  DECODING ====="
@@ -98,8 +98,8 @@ steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri
 # echo "===== SGMM  DECODING ====="
 # echo
 
-# steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
-#   --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode || exit 1
+steps/decode_sgmm2.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
+  --transform-dir exp/tri3b/decode  exp/sgmm2/graph data/test exp/sgmm2/decode || exit 1
 
 
 # steps/decode_sgmm2.sh --use-fmllr true --config conf/decode.config --nj $nj --cmd "$decode_cmd" \
