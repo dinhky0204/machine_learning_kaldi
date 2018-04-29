@@ -40,8 +40,8 @@ mfccdir=mfcc
 steps/make_mfcc.sh --cmd "$train_cmd" --nj 4 $x exp/make_mfcc/$x $mfccdir
 steps/compute_cmvn_stats.sh $x exp/make_mfcc/$x $mfccdir
 # Uncomment and modify arguments in scripts below if you have any problems with data sorting
-# utils/validate_data_dir.sh data/train     # script for checking prepared data - here: for data/train directory
-# utils/fix_data_dir.sh data/train          # tool for data proper sorting if needed - here: for data/train directory
+utils/validate_data_dir.sh data/train     # script for checking prepared data - here: for data/train directory
+utils/fix_data_dir.sh data/train          # tool for data proper sorting if needed - here: for data/train directory
 steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" data/train exp/make_mfcc/train $mfccdir
 steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" data/test exp/make_mfcc/test $mfccdir
 
@@ -140,18 +140,18 @@ steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri2a exp
 # steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri2a/graph data/test exp/tri2a/decode || exit 1
 
 # for tri2b training
-# echo
-# echo "===== TRANING TRI2B ====="
-# echo
+echo
+echo "===== TRANING TRI2B ====="
+echo
 
-# steps/train_lda_mllt.sh --cmd "$train_cmd" 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
-#  steps/train_lda_mllt.sh --cmd "$train_cmd" --allow-large-dim true 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
+steps/train_lda_mllt.sh --cmd "$train_cmd" 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
+steps/train_lda_mllt.sh --cmd "$train_cmd" --allow-large-dim true 1800 9000 data/train data/lang exp/tri1_ali exp/tri2b || exit 1
 
-# echo
-# echo "===== TRI2B ALIGNMENT ====="
-# echo
+echo
+echo "===== TRI2B ALIGNMENT ====="
+echo
 
-# steps/align_si.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_ali || exit 1
+steps/align_si.sh --nj $nt --cmd "$train_cmd" data/train data/lang exp/tri2b exp/tri2b_ali || exit 1
 
 # for train tri2b_mmi
 # echo

@@ -1,0 +1,13 @@
+est-lda --write-full-matrix=exp/tri2b/full.mat --dim=40 exp/tri2b/0.mat exp/tri2b/lda.1.acc 
+ASSERTION_FAILED (est-lda[5.4.10~1-f629b]:Estimate():lda-estimate.cc:91) : 'target_dim <= Dim() && (target_dim < NumClasses() || opts.allow_large_dim)' 
+
+[ Stack-Trace: ]
+
+kaldi::MessageLogger::HandleMessage(kaldi::LogMessageEnvelope const&, char const*)
+kaldi::MessageLogger::~MessageLogger()
+kaldi::KaldiAssertFailure_(char const*, char const*, int, char const*)
+kaldi::LdaEstimate::Estimate(kaldi::LdaEstimateOptions const&, kaldi::Matrix<float>*, kaldi::Matrix<float>*) const
+main
+__libc_start_main
+_start
+
