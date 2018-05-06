@@ -37,7 +37,7 @@ echo
 
 # Making feats.scp files
 mfccdir=mfcc
-steps/make_mfcc.sh --cmd "$train_cmd" --nj 4 $x exp/make_mfcc/$x $mfccdir
+steps/make_mfcc.sh --cmd "$train_cmd" --nj 1 $x exp/make_mfcc/$x $mfccdir --mfcc-config conf/mfcc.conf
 steps/compute_cmvn_stats.sh $x exp/make_mfcc/$x $mfccdir
 # Uncomment and modify arguments in scripts below if you have any problems with data sorting
 utils/validate_data_dir.sh data/train     # script for checking prepared data - here: for data/train directory
@@ -108,12 +108,18 @@ echo
 
 steps/align_si.sh --boost-silence 1.5 --nj $nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali || exit 1
 
+
+utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
+steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
+
+
+
 # for tri1 training
 echo
 echo "===== TRI1 (first triphone pass) TRAINING ====="
 echo
 
-steps/train_deltas.sh --boost-silence 1.5 --cmd "$train_cmd" 2000 10000 data/train data/lang exp/mono_ali exp/tri1 || exit 1
+steps/train_deltas.sh --boost-silence 1.5 --cmd "$train_cmd" 2500 15000 data/train data/lang exp/mono_ali exp/tri1 || exit 1
 
 # for tri1 decoding
 echo
@@ -121,6 +127,9 @@ echo "===== TRI1 ALIGNMENT ====="
 echo
 
 steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/tri1 exp/tri1_ali || exit 1
+
+utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
+steps/decode.sh --config conf/decode.config --nj 1 --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
 
 # for tri2a training
 echo 

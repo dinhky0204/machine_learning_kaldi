@@ -1,282 +1,372 @@
 # lattice-scale --inv-acoustic-scale=9 "ark:gunzip -c exp/tri1/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri1/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri1/graph/words.txt | local/wer_hyp_filter > exp/tri1/decode/scoring_kaldi/penalty_0.0/9.txt 
-# Started at Sun Apr 29 13:55:40 +07 2018
+# Started at Sun May  6 23:04:36 +07 2018
 #
 lattice-scale --inv-acoustic-scale=9 'ark:gunzip -c exp/tri1/decode/lat.*.gz|' ark:- 
 lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- 
 lattice-best-path --word-symbol-table=exp/tri1/graph/words.txt ark:- ark,t:- 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-1, best cost 18.7906 + 530.26 = 549.05 over 252 frames.
-dinhky-phase1-1 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-2, best cost 13.3422 + 531.188 = 544.531 over 254 frames.
-dinhky-phase1-2 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-3, best cost 15.6328 + 416.736 = 432.369 over 224 frames.
-dinhky-phase1-3 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-4, best cost 14.4293 + 530.277 = 544.707 over 261 frames.
-dinhky-phase1-4 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-5, best cost 18.1788 + 474.139 = 492.318 over 231 frames.
-dinhky-phase1-5 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-6, best cost 14.37 + 489.058 = 503.428 over 203 frames.
-dinhky-phase1-6 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-7, best cost 14.4015 + 520.784 = 535.185 over 236 frames.
-dinhky-phase1-7 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-8, best cost 18.3084 + 503.004 = 521.312 over 252 frames.
-dinhky-phase1-8 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase1-9, best cost 17.4924 + 522.06 = 539.553 over 259 frames.
-dinhky-phase1-9 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-1, best cost 15.5985 + 495.667 = 511.265 over 252 frames.
-dinhky-phase10-1 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-2, best cost 17.4379 + 477.863 = 495.301 over 238 frames.
-dinhky-phase10-2 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-3, best cost 15.1748 + 551.712 = 566.887 over 275 frames.
-dinhky-phase10-3 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-4, best cost 16.7875 + 484.698 = 501.486 over 252 frames.
-dinhky-phase10-4 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-5, best cost 18.5334 + 433.518 = 452.052 over 222 frames.
-dinhky-phase10-5 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-6, best cost 17.0346 + 513.556 = 530.591 over 238 frames.
-dinhky-phase10-6 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-7, best cost 23.4803 + 501.392 = 524.872 over 261 frames.
-dinhky-phase10-7 chi5n <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-8, best cost 16.113 + 640.093 = 656.206 over 275 frames.
-dinhky-phase10-8 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase10-9, best cost 18.9013 + 496.935 = 515.836 over 254 frames.
-dinhky-phase10-9 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-1, best cost 23.2254 + 557.995 = 581.22 over 247 frames.
-dinhky-phase11-1 na7m <UNK> ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-2, best cost 15.5218 + 569.051 = 584.573 over 280 frames.
-dinhky-phase11-2 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-3, best cost 15.7844 + 584.059 = 599.843 over 264 frames.
-dinhky-phase11-3 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-4, best cost 18.8303 + 479.172 = 498.003 over 226 frames.
-dinhky-phase11-4 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-5, best cost 14.3831 + 534.299 = 548.682 over 259 frames.
-dinhky-phase11-5 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-6, best cost 23.0258 + 808.375 = 831.401 over 356 frames.
-dinhky-phase11-6 sa5u <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-7, best cost 17.1046 + 547.187 = 564.292 over 271 frames.
-dinhky-phase11-7 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-8, best cost 24.4625 + 668.896 = 693.359 over 301 frames.
-dinhky-phase11-8 bo85n mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase11-9, best cost 14.5229 + 476.59 = 491.113 over 240 frames.
-dinhky-phase11-9 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-1, best cost 17.5204 + 578.258 = 595.778 over 282 frames.
-dinhky-phase12-1 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-2, best cost 26.6927 + 732.393 = 759.086 over 287 frames.
-dinhky-phase12-2 na7m ba <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-3, best cost 14.8177 + 553.551 = 568.368 over 282 frames.
-dinhky-phase12-3 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-4, best cost 16.95 + 544.176 = 561.126 over 250 frames.
-dinhky-phase12-4 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-5, best cost 18.9142 + 548.459 = 567.373 over 261 frames.
-dinhky-phase12-5 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-6, best cost 14.8469 + 535.123 = 549.97 over 275 frames.
-dinhky-phase12-6 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-7, best cost 17.4472 + 593.652 = 611.099 over 294 frames.
-dinhky-phase12-7 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-8, best cost 19.5598 + 618.465 = 638.025 over 305 frames.
-dinhky-phase12-8 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase12-9, best cost 11.6175 + 515.624 = 527.242 over 240 frames.
-dinhky-phase12-9 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-1, best cost 25.4864 + 624.293 = 649.779 over 217 frames.
-dinhky-phase13-1 na7m chi5n ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-2, best cost 16.8168 + 583.167 = 599.983 over 282 frames.
-dinhky-phase13-2 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-3, best cost 27.2875 + 759.579 = 786.867 over 343 frames.
-dinhky-phase13-3 mo86t ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-4, best cost 13.994 + 572.471 = 586.465 over 298 frames.
-dinhky-phase13-4 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-5, best cost 19.0026 + 518.424 = 537.426 over 240 frames.
-dinhky-phase13-5 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-6, best cost 17.2154 + 550.555 = 567.771 over 275 frames.
-dinhky-phase13-6 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-7, best cost 17.7094 + 586.501 = 604.21 over 261 frames.
-dinhky-phase13-7 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-8, best cost 15.2439 + 634.538 = 649.782 over 319 frames.
-dinhky-phase13-8 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase13-9, best cost 13.4504 + 510.596 = 524.046 over 268 frames.
-dinhky-phase13-9 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-1, best cost 17.5142 + 520.866 = 538.38 over 266 frames.
-dinhky-phase14-1 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-2, best cost 16.7228 + 516.75 = 533.473 over 254 frames.
-dinhky-phase14-2 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-3, best cost 14.7241 + 513.99 = 528.714 over 268 frames.
-dinhky-phase14-3 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-4, best cost 15.1499 + 529.131 = 544.281 over 257 frames.
-dinhky-phase14-4 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-5, best cost 24.9921 + 670.437 = 695.429 over 349 frames.
-dinhky-phase14-5 hai <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-6, best cost 19.4417 + 582.148 = 601.59 over 271 frames.
-dinhky-phase14-6 ba mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-7, best cost 17.4417 + 677.835 = 695.277 over 315 frames.
-dinhky-phase14-7 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-8, best cost 25.3491 + 703.588 = 728.937 over 296 frames.
-dinhky-phase14-8 chi5n na7m chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase14-9, best cost 14.8242 + 594.963 = 609.788 over 280 frames.
-dinhky-phase14-9 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-1, best cost 19.6386 + 644.921 = 664.559 over 324 frames.
-dinhky-phase15-1 na7m ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-2, best cost 17.4177 + 592.653 = 610.071 over 275 frames.
-dinhky-phase15-2 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-3, best cost 16.7367 + 571.121 = 587.858 over 280 frames.
-dinhky-phase15-3 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-4, best cost 21.2784 + 673.792 = 695.07 over 308 frames.
-dinhky-phase15-4 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-5, best cost 14.2351 + 577.191 = 591.426 over 264 frames.
-dinhky-phase15-5 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-6, best cost 21.2669 + 608.446 = 629.713 over 250 frames.
-dinhky-phase15-6 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-7, best cost 14.0766 + 504.303 = 518.38 over 247 frames.
-dinhky-phase15-7 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-8, best cost 17.5123 + 576.472 = 593.985 over 280 frames.
-dinhky-phase15-8 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase15-9, best cost 18.0372 + 631.629 = 649.666 over 291 frames.
-dinhky-phase15-9 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-1, best cost 13.3645 + 460.628 = 473.993 over 233 frames.
-dinhky-phase2-1 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-2, best cost 13.833 + 429.641 = 443.474 over 215 frames.
-dinhky-phase2-2 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-3, best cost 21.5948 + 512.631 = 534.226 over 219 frames.
-dinhky-phase2-3 mo86t mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-4, best cost 14.4464 + 521.3 = 535.746 over 224 frames.
-dinhky-phase2-4 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-5, best cost 18.8778 + 488.968 = 507.846 over 247 frames.
-dinhky-phase2-5 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-6, best cost 13.7768 + 420.493 = 434.27 over 212 frames.
-dinhky-phase2-6 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-7, best cost 18.779 + 478.484 = 497.263 over 229 frames.
-dinhky-phase2-7 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-8, best cost 13.6733 + 491.1 = 504.773 over 236 frames.
-dinhky-phase2-8 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase2-9, best cost 16.8418 + 537.746 = 554.588 over 266 frames.
-dinhky-phase2-9 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-1, best cost 15.9513 + 492.322 = 508.274 over 231 frames.
-dinhky-phase3-1 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-2, best cost 15.0019 + 585.326 = 600.328 over 245 frames.
-dinhky-phase3-2 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-3, best cost 14.1986 + 468.71 = 482.909 over 238 frames.
-dinhky-phase3-3 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-4, best cost 15.7152 + 486.076 = 501.791 over 250 frames.
-dinhky-phase3-4 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-5, best cost 19.4737 + 562.506 = 581.98 over 229 frames.
-dinhky-phase3-5 mo86t ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-6, best cost 16.0675 + 520.709 = 536.776 over 240 frames.
-dinhky-phase3-6 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-7, best cost 16.7716 + 515.864 = 532.635 over 247 frames.
-dinhky-phase3-7 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-8, best cost 16.4462 + 445.63 = 462.076 over 233 frames.
-dinhky-phase3-8 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase3-9, best cost 16.4237 + 458.726 = 475.15 over 222 frames.
-dinhky-phase3-9 mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-1, best cost 22.0674 + 558.339 = 580.406 over 240 frames.
-dinhky-phase4-1 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-2, best cost 14.5541 + 511.731 = 526.285 over 233 frames.
-dinhky-phase4-2 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-3, best cost 14.093 + 435.37 = 449.463 over 217 frames.
-dinhky-phase4-3 ba 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-4, best cost 21.7336 + 508.256 = 529.99 over 233 frames.
-dinhky-phase4-4 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-5, best cost 14.9994 + 462.212 = 477.212 over 236 frames.
-dinhky-phase4-5 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-6, best cost 16.672 + 536.265 = 552.937 over 271 frames.
-dinhky-phase4-6 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-7, best cost 20.0428 + 589.199 = 609.242 over 282 frames.
-dinhky-phase4-7 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-8, best cost 15.4326 + 460.885 = 476.317 over 236 frames.
-dinhky-phase4-8 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase4-9, best cost 15.0833 + 480.68 = 495.764 over 240 frames.
-dinhky-phase4-9 hai 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-1, best cost 24.0608 + 595.443 = 619.503 over 275 frames.
-dinhky-phase5-1 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-2, best cost 19.82 + 510.277 = 530.097 over 240 frames.
-dinhky-phase5-2 chi5n chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-3, best cost 25.2742 + 541.756 = 567.03 over 233 frames.
-dinhky-phase5-3 na7m chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-4, best cost 23.4237 + 478.385 = 501.808 over 236 frames.
-dinhky-phase5-4 bo85n <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-5, best cost 20.3164 + 583.435 = 603.752 over 271 frames.
-dinhky-phase5-5 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-6, best cost 15.3114 + 547.342 = 562.654 over 275 frames.
-dinhky-phase5-6 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-7, best cost 17.4089 + 576.726 = 594.135 over 284 frames.
-dinhky-phase5-7 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-8, best cost 21.9557 + 626.485 = 648.441 over 264 frames.
-dinhky-phase5-8 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase5-9, best cost 22.8522 + 559.226 = 582.078 over 280 frames.
-dinhky-phase5-9 bo85n mo86t 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-1, best cost 20.043 + 503.762 = 523.805 over 245 frames.
-dinhky-phase6-1 bo85n 
-LOG (lattice-scale[5.4.10~1-f629b]:main():lattice-scale.cc:90) Done 135 lattices.
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-2, best cost 16.7151 + 498.377 = 515.092 over 261 frames.
-dinhky-phase6-2 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-3, best cost 19.3382 + 587.925 = 607.263 over 289 frames.
-dinhky-phase6-3 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-4, best cost 16.5741 + 507.421 = 523.996 over 259 frames.
-dinhky-phase6-4 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-5, best cost 17.1124 + 522.303 = 539.415 over 247 frames.
-dinhky-phase6-5 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-6, best cost 17.0996 + 533.002 = 550.102 over 257 frames.
-dinhky-phase6-6 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-7, best cost 17.9217 + 539.207 = 557.128 over 247 frames.
-dinhky-phase6-7 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-8, best cost 17.7375 + 529.476 = 547.214 over 240 frames.
-dinhky-phase6-8 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase6-9, best cost 28.0227 + 559.389 = 587.412 over 273 frames.
-dinhky-phase6-9 ba4y <UNK> 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-1, best cost 14.9196 + 437.549 = 452.469 over 217 frames.
-dinhky-phase7-1 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-2, best cost 19.5208 + 576.427 = 595.948 over 259 frames.
-dinhky-phase7-2 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-3, best cost 18.8783 + 551.54 = 570.418 over 261 frames.
-dinhky-phase7-3 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-4, best cost 24.6298 + 711.255 = 735.885 over 259 frames.
-dinhky-phase7-4 na7m chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-5, best cost 15.7472 + 524.788 = 540.535 over 247 frames.
-dinhky-phase7-5 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-6, best cost 17.5689 + 518.172 = 535.741 over 247 frames.
-dinhky-phase7-6 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-7, best cost 19.701 + 578.69 = 598.391 over 226 frames.
-dinhky-phase7-7 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-8, best cost 18.0059 + 498.689 = 516.695 over 236 frames.
-dinhky-phase7-8 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase7-9, best cost 21.5379 + 538.475 = 560.013 over 275 frames.
-dinhky-phase7-9 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-1, best cost 20.2778 + 465.22 = 485.498 over 236 frames.
-dinhky-phase8-1 na7m 
-LOG (lattice-add-penalty[5.4.10~1-f629b]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 135 lattices.
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-2, best cost 17.2306 + 589.631 = 606.862 over 298 frames.
-dinhky-phase8-2 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-3, best cost 19.4596 + 532.881 = 552.341 over 264 frames.
-dinhky-phase8-3 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-4, best cost 21.4863 + 677.066 = 698.553 over 264 frames.
-dinhky-phase8-4 na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-5, best cost 17.2496 + 528.061 = 545.31 over 264 frames.
-dinhky-phase8-5 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-6, best cost 21.1432 + 515.26 = 536.404 over 259 frames.
-dinhky-phase8-6 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-7, best cost 15.5006 + 486.733 = 502.233 over 231 frames.
-dinhky-phase8-7 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-8, best cost 17.2037 + 544.064 = 561.268 over 273 frames.
-dinhky-phase8-8 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase8-9, best cost 23.1368 + 563.613 = 586.749 over 252 frames.
-dinhky-phase8-9 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-1, best cost 17.1416 + 522.126 = 539.268 over 257 frames.
-dinhky-phase9-1 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-2, best cost 20.879 + 531.047 = 551.926 over 238 frames.
-dinhky-phase9-2 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-3, best cost 17.4437 + 471.155 = 488.599 over 240 frames.
-dinhky-phase9-3 ba4y 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-4, best cost 28.2536 + 681.439 = 709.692 over 282 frames.
-dinhky-phase9-4 na7m na7m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-5, best cost 21.4662 + 549.388 = 570.854 over 250 frames.
-dinhky-phase9-5 chi5n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-6, best cost 20.3729 + 601.793 = 622.166 over 261 frames.
-dinhky-phase9-6 bo85n 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-7, best cost 19.1997 + 555.581 = 574.781 over 275 frames.
-dinhky-phase9-7 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-8, best cost 17.7355 + 513.789 = 531.525 over 236 frames.
-dinhky-phase9-8 sa5u 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance dinhky-phase9-9, best cost 20.1118 + 510.669 = 530.781 over 238 frames.
-dinhky-phase9-9 ta5m 
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:124) Overall cost per frame is 2.18111 = 0.0704063 [graph] + 2.11071 [acoustic] over 34862 frames.
-LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:128) Done 135 lattices, failed for 0
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-1, best cost 26.6345 + 1378.57 = 1405.21 over 251 frames.
+somebody-phase1-1 mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-2, best cost 18.2607 + 1377.81 = 1396.07 over 253 frames.
+somebody-phase1-2 hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-3, best cost 17.4518 + 1131.73 = 1149.18 over 223 frames.
+somebody-phase1-3 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-4, best cost 21.88 + 1392.92 = 1414.8 over 260 frames.
+somebody-phase1-4 mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-5, best cost 20.1838 + 1235.72 = 1255.9 over 230 frames.
+somebody-phase1-5 ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-6, best cost 18.3923 + 1221.84 = 1240.23 over 202 frames.
+somebody-phase1-6 hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-7, best cost 22.7082 + 1292.46 = 1315.17 over 235 frames.
+somebody-phase1-7 hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-8, best cost 24.9974 + 1338.55 = 1363.55 over 251 frames.
+somebody-phase1-8 mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase1-9, best cost 16.4441 + 1357.01 = 1373.46 over 258 frames.
+somebody-phase1-9 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-1, best cost 19.1255 + 1341.37 = 1360.49 over 251 frames.
+somebody-phase10-1 sa5u 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-2, best cost 21.6604 + 1245.81 = 1267.47 over 237 frames.
+somebody-phase10-2 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-3, best cost 23.051 + 1460.49 = 1483.54 over 274 frames.
+somebody-phase10-3 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-4, best cost 14.7497 + 1305.94 = 1320.69 over 251 frames.
+somebody-phase10-4 na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-5, best cost 17.188 + 1170.64 = 1187.83 over 221 frames.
+somebody-phase10-5 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-6, best cost 22.346 + 1310.84 = 1333.19 over 237 frames.
+somebody-phase10-6 <UNK> na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-7, best cost 19.6251 + 1346.01 = 1365.63 over 260 frames.
+somebody-phase10-7 <UNK> chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-8, best cost 24.7614 + 1564.37 = 1589.13 over 274 frames.
+somebody-phase10-8 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase10-9, best cost 25.9048 + 1378.55 = 1404.46 over 253 frames.
+somebody-phase10-9 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-1, best cost 13.6113 + 1304.8 = 1318.41 over 246 frames.
+somebody-phase11-1 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-2, best cost 21.0129 + 1418.7 = 1439.71 over 279 frames.
+somebody-phase11-2 <UNK> mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-3, best cost 15.205 + 1375.78 = 1390.99 over 263 frames.
+somebody-phase11-3 na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-4, best cost 19.963 + 1157.37 = 1177.33 over 225 frames.
+somebody-phase11-4 ba4y 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-5, best cost 13.6029 + 1344.83 = 1358.44 over 258 frames.
+somebody-phase11-5 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-6, best cost 22.9442 + 1900.74 = 1923.69 over 355 frames.
+somebody-phase11-6 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-7, best cost 16.7323 + 1342.25 = 1358.98 over 270 frames.
+somebody-phase11-7 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-8, best cost 29.7674 + 1590.19 = 1619.96 over 300 frames.
+somebody-phase11-8 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase11-9, best cost 16.8361 + 1224.48 = 1241.32 over 239 frames.
+somebody-phase11-9 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-1, best cost 24.9906 + 1432.45 = 1457.44 over 281 frames.
+somebody-phase12-1 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-2, best cost 18.7882 + 1575.7 = 1594.49 over 286 frames.
+somebody-phase12-2 ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-3, best cost 19.2869 + 1384.8 = 1404.09 over 281 frames.
+somebody-phase12-3 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-4, best cost 24.2793 + 1343.28 = 1367.55 over 249 frames.
+somebody-phase12-4 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-5, best cost 27.4945 + 1359.19 = 1386.68 over 260 frames.
+somebody-phase12-5 <UNK> ba4y 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-6, best cost 20.9391 + 1362.97 = 1383.91 over 274 frames.
+somebody-phase12-6 <UNK> ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-7, best cost 23.2183 + 1527.09 = 1550.3 over 293 frames.
+somebody-phase12-7 bo85n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-8, best cost 26.2594 + 1539.12 = 1565.38 over 304 frames.
+somebody-phase12-8 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase12-9, best cost 13.9147 + 1196.98 = 1210.89 over 239 frames.
+somebody-phase12-9 na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-1, best cost 20.8475 + 1314.27 = 1335.12 over 216 frames.
+somebody-phase13-1 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-2, best cost 23.9322 + 1437.03 = 1460.96 over 281 frames.
+somebody-phase13-2 <UNK> hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-3, best cost 25.1319 + 1812.46 = 1837.59 over 342 frames.
+somebody-phase13-3 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-4, best cost 16.0343 + 1495.17 = 1511.2 over 297 frames.
+somebody-phase13-4 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-5, best cost 25.5516 + 1279.69 = 1305.24 over 239 frames.
+somebody-phase13-5 chi5n sa5u 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-6, best cost 18.4097 + 1338.1 = 1356.51 over 274 frames.
+somebody-phase13-6 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-7, best cost 26.2164 + 1359.51 = 1385.73 over 260 frames.
+somebody-phase13-7 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-8, best cost 19.0457 + 1629.55 = 1648.6 over 318 frames.
+somebody-phase13-8 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase13-9, best cost 18.8218 + 1304.05 = 1322.87 over 267 frames.
+somebody-phase13-9 bo85n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-1, best cost 17.8027 + 1340.81 = 1358.61 over 265 frames.
+somebody-phase14-1 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-2, best cost 15.6473 + 1322.71 = 1338.35 over 253 frames.
+somebody-phase14-2 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-3, best cost 17.4478 + 1332.91 = 1350.36 over 267 frames.
+somebody-phase14-3 ba4y 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-4, best cost 16.8695 + 1327.8 = 1344.67 over 256 frames.
+somebody-phase14-4 sa5u 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-5, best cost 22.7537 + 1718.26 = 1741.01 over 348 frames.
+somebody-phase14-5 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-6, best cost 21.0004 + 1384.25 = 1405.25 over 270 frames.
+somebody-phase14-6 ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-7, best cost 24.9533 + 1588.69 = 1613.64 over 314 frames.
+somebody-phase14-7 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-8, best cost 28.7985 + 1643.54 = 1672.34 over 295 frames.
+somebody-phase14-8 <UNK> na7m chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase14-9, best cost 18.6572 + 1379.6 = 1398.26 over 279 frames.
+somebody-phase14-9 bo85n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-1, best cost 23.7784 + 1625.13 = 1648.91 over 323 frames.
+somebody-phase15-1 <UNK> ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-2, best cost 18.6387 + 1438.83 = 1457.47 over 274 frames.
+somebody-phase15-2 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-3, best cost 18.5848 + 1398.26 = 1416.85 over 279 frames.
+somebody-phase15-3 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-4, best cost 16.039 + 1587.62 = 1603.66 over 307 frames.
+somebody-phase15-4 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-5, best cost 23.1459 + 1428.29 = 1451.44 over 263 frames.
+somebody-phase15-5 <UNK> na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-6, best cost 35.8337 + 1381.82 = 1417.66 over 249 frames.
+somebody-phase15-6 <UNK> <UNK> ba4y chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-7, best cost 14.179 + 1249.77 = 1263.95 over 246 frames.
+somebody-phase15-7 sa5u 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-8, best cost 24.6323 + 1395.19 = 1419.82 over 279 frames.
+somebody-phase15-8 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase15-9, best cost 23.4926 + 1444.03 = 1467.53 over 290 frames.
+somebody-phase15-9 <UNK> mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-1, best cost 26.9469 + 2327.35 = 2354.3 over 409 frames.
+somebody-phase16-1 <UNK> ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-2, best cost 27.259 + 1713.81 = 1741.07 over 293 frames.
+somebody-phase16-2 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-3, best cost 27.6169 + 2350.65 = 2378.26 over 418 frames.
+somebody-phase16-3 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-4, best cost 23.3547 + 1810.81 = 1834.16 over 318 frames.
+somebody-phase16-4 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-5, best cost 26.8449 + 1788.5 = 1815.34 over 314 frames.
+somebody-phase16-5 <UNK> sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-6, best cost 27.3173 + 2182.76 = 2210.08 over 386 frames.
+somebody-phase16-6 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-7, best cost 25.4354 + 2175.03 = 2200.46 over 390 frames.
+somebody-phase16-7 <UNK> ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-8, best cost 23.1377 + 1836.41 = 1859.55 over 314 frames.
+somebody-phase16-8 <UNK> chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase16-9, best cost 22.9933 + 1788.19 = 1811.18 over 307 frames.
+somebody-phase16-9 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-1, best cost 24.6333 + 1746.57 = 1771.21 over 302 frames.
+somebody-phase17-1 <UNK> chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-2, best cost 23.7837 + 1626.38 = 1650.16 over 286 frames.
+somebody-phase17-2 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-3, best cost 26.4562 + 2001.74 = 2028.19 over 351 frames.
+somebody-phase17-3 <UNK> ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-4, best cost 24.6735 + 1849.49 = 1874.17 over 321 frames.
+somebody-phase17-4 <UNK> sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-5, best cost 23.1678 + 1859.02 = 1882.19 over 316 frames.
+somebody-phase17-5 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-6, best cost 24.0863 + 1642.93 = 1667.01 over 288 frames.
+somebody-phase17-6 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-7, best cost 25.0319 + 2035.9 = 2060.94 over 360 frames.
+somebody-phase17-7 <UNK> ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-8, best cost 29.5339 + 2696.34 = 2725.88 over 467 frames.
+somebody-phase17-8 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase17-9, best cost 25.3186 + 2266.27 = 2291.59 over 388 frames.
+somebody-phase17-9 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-1, best cost 25.2183 + 1858.46 = 1883.68 over 330 frames.
+somebody-phase18-1 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-2, best cost 25.1481 + 2024.43 = 2049.58 over 348 frames.
+somebody-phase18-2 <UNK> ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-3, best cost 24.7349 + 1642.49 = 1667.22 over 295 frames.
+somebody-phase18-3 <UNK> ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-4, best cost 28.9499 + 2641.08 = 2670.03 over 465 frames.
+somebody-phase18-4 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-5, best cost 24.1312 + 1653.07 = 1677.21 over 286 frames.
+somebody-phase18-5 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-6, best cost 23.2971 + 1778.54 = 1801.84 over 309 frames.
+somebody-phase18-6 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-7, best cost 28.3167 + 2302.42 = 2330.74 over 411 frames.
+somebody-phase18-7 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-8, best cost 25.0631 + 1844.45 = 1869.51 over 318 frames.
+somebody-phase18-8 <UNK> chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase18-9, best cost 24.7813 + 1821.26 = 1846.04 over 321 frames.
+somebody-phase18-9 <UNK> sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-1, best cost 26.4761 + 2201.83 = 2228.3 over 372 frames.
+somebody-phase19-1 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-2, best cost 28.4121 + 2010.91 = 2039.32 over 346 frames.
+somebody-phase19-2 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-3, best cost 24.3299 + 1881.32 = 1905.65 over 328 frames.
+somebody-phase19-3 <UNK> ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-4, best cost 24.4244 + 1662.17 = 1686.6 over 293 frames.
+somebody-phase19-4 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-5, best cost 24.0667 + 1645.44 = 1669.51 over 293 frames.
+somebody-phase19-5 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-6, best cost 25.4467 + 1918.69 = 1944.14 over 339 frames.
+somebody-phase19-6 <UNK> sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-7, best cost 23.7396 + 1872.77 = 1896.51 over 321 frames.
+somebody-phase19-7 <UNK> ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-8, best cost 27.6631 + 2328.49 = 2356.15 over 409 frames.
+somebody-phase19-8 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase19-9, best cost 24.1572 + 1658.94 = 1683.09 over 283 frames.
+somebody-phase19-9 <UNK> chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-1, best cost 21.1069 + 1265.88 = 1286.99 over 232 frames.
+somebody-phase2-1 mo86t ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-2, best cost 18.5195 + 1178.3 = 1196.82 over 214 frames.
+somebody-phase2-2 <UNK> hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-3, best cost 23.2037 + 1259.28 = 1282.48 over 218 frames.
+somebody-phase2-3 <UNK> mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-4, best cost 27.0844 + 1284.75 = 1311.83 over 223 frames.
+somebody-phase2-4 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-5, best cost 17.1109 + 1263.15 = 1280.26 over 246 frames.
+somebody-phase2-5 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-6, best cost 13.5807 + 1165.44 = 1179.02 over 211 frames.
+somebody-phase2-6 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-7, best cost 20.4549 + 1237.53 = 1257.98 over 228 frames.
+somebody-phase2-7 <UNK> ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-8, best cost 16.0742 + 1246.88 = 1262.95 over 235 frames.
+somebody-phase2-8 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase2-9, best cost 16.2783 + 1408.54 = 1424.82 over 265 frames.
+somebody-phase2-9 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-1, best cost 24.6607 + 1722.2 = 1746.86 over 295 frames.
+somebody-phase20-1 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-2, best cost 31.7593 + 2286.59 = 2318.34 over 397 frames.
+somebody-phase20-2 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-3, best cost 26.1289 + 1939.07 = 1965.2 over 339 frames.
+somebody-phase20-3 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-4, best cost 23.372 + 1742.06 = 1765.44 over 304 frames.
+somebody-phase20-4 <UNK> ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-5, best cost 24.667 + 2014.41 = 2039.08 over 346 frames.
+somebody-phase20-5 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-6, best cost 25.2173 + 1932.58 = 1957.79 over 339 frames.
+somebody-phase20-6 <UNK> sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-7, best cost 25.04 + 1812.99 = 1838.03 over 314 frames.
+somebody-phase20-7 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-8, best cost 23.0998 + 1959.2 = 1982.3 over 337 frames.
+somebody-phase20-8 <UNK> ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase20-9, best cost 22.6588 + 1719.39 = 1742.05 over 293 frames.
+somebody-phase20-9 <UNK> chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-1, best cost 14.0917 + 1225.39 = 1239.48 over 230 frames.
+somebody-phase3-1 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-2, best cost 19.2141 + 1412.68 = 1431.9 over 244 frames.
+somebody-phase3-2 mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-3, best cost 22.3159 + 1295.76 = 1318.08 over 237 frames.
+somebody-phase3-3 ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-4, best cost 17.9348 + 1301.57 = 1319.5 over 249 frames.
+somebody-phase3-4 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-5, best cost 25.1058 + 1344.8 = 1369.9 over 228 frames.
+somebody-phase3-5 <UNK> mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-6, best cost 24.9815 + 1334.98 = 1359.96 over 239 frames.
+somebody-phase3-6 <UNK> hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-7, best cost 28.972 + 1318.93 = 1347.9 over 246 frames.
+somebody-phase3-7 <UNK> <UNK> mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-8, best cost 16.2076 + 1177.21 = 1193.42 over 232 frames.
+somebody-phase3-8 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase3-9, best cost 24.7657 + 1158.23 = 1182.99 over 221 frames.
+somebody-phase3-9 <UNK> mo86t 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-1, best cost 30.5894 + 1387.51 = 1418.1 over 239 frames.
+somebody-phase4-1 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-2, best cost 22.8275 + 1337.42 = 1360.25 over 232 frames.
+somebody-phase4-2 hai <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-3, best cost 15.3252 + 1166.43 = 1181.76 over 216 frames.
+somebody-phase4-3 ba 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-4, best cost 25.3133 + 1363.97 = 1389.29 over 232 frames.
+somebody-phase4-4 ba4y 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-5, best cost 21.6161 + 1193.94 = 1215.56 over 235 frames.
+somebody-phase4-5 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-6, best cost 24.5 + 1415.33 = 1439.83 over 270 frames.
+somebody-phase4-6 ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-7, best cost 25.6256 + 1551.08 = 1576.71 over 281 frames.
+somebody-phase4-7 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-8, best cost 18.5218 + 1227.28 = 1245.8 over 235 frames.
+somebody-phase4-8 ba4y 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase4-9, best cost 15.9476 + 1258.05 = 1274 over 239 frames.
+somebody-phase4-9 hai 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-1, best cost 29.0561 + 1539.04 = 1568.1 over 274 frames.
+somebody-phase5-1 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-2, best cost 36.3956 + 1287.43 = 1323.82 over 239 frames.
+somebody-phase5-2 chi5n <UNK> <UNK> <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-3, best cost 31.7547 + 1372.08 = 1403.83 over 232 frames.
+somebody-phase5-3 <UNK> na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-4, best cost 23.8446 + 1233.59 = 1257.44 over 235 frames.
+somebody-phase5-4 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-5, best cost 27.1827 + 1517.42 = 1544.6 over 270 frames.
+somebody-phase5-5 ba4y ba <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-6, best cost 23.1093 + 1462.53 = 1485.64 over 274 frames.
+somebody-phase5-6 na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-7, best cost 27.6373 + 1532.72 = 1560.36 over 283 frames.
+somebody-phase5-7 ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-8, best cost 30.5968 + 1562.67 = 1593.26 over 263 frames.
+somebody-phase5-8 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase5-9, best cost 17.6313 + 1499.52 = 1517.15 over 279 frames.
+somebody-phase5-9 bo85n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-1, best cost 23.1617 + 1324.93 = 1348.09 over 244 frames.
+somebody-phase6-1 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-2, best cost 19.0494 + 1362.14 = 1381.19 over 260 frames.
+somebody-phase6-2 na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-3, best cost 25.4117 + 1554.03 = 1579.44 over 288 frames.
+somebody-phase6-3 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-4, best cost 17.4004 + 1381.22 = 1398.62 over 258 frames.
+somebody-phase6-4 bo85n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-5, best cost 30.4934 + 1370.69 = 1401.18 over 246 frames.
+somebody-phase6-5 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-6, best cost 25.5762 + 1401.05 = 1426.63 over 256 frames.
+somebody-phase6-6 na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-7, best cost 22.9672 + 1320.52 = 1343.48 over 246 frames.
+somebody-phase6-7 <UNK> ta5m 
+LOG (lattice-scale[5.4.10~1-f629b]:main():lattice-scale.cc:90) Done 180 lattices.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-8, best cost 29.811 + 1369.61 = 1399.42 over 239 frames.
+somebody-phase6-8 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase6-9, best cost 36.7514 + 1520.12 = 1556.87 over 272 frames.
+somebody-phase6-9 ba4y <UNK> <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-1, best cost 19.5387 + 1167.89 = 1187.42 over 216 frames.
+somebody-phase7-1 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-2, best cost 29.3719 + 1417.89 = 1447.26 over 258 frames.
+somebody-phase7-2 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-3, best cost 26.3886 + 1391.81 = 1418.2 over 260 frames.
+somebody-phase7-3 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-4, best cost 28.8667 + 1663.56 = 1692.42 over 258 frames.
+somebody-phase7-4 na7m <UNK> <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-5, best cost 25.129 + 1331.23 = 1356.36 over 246 frames.
+somebody-phase7-5 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-6, best cost 20.4292 + 1317.87 = 1338.3 over 246 frames.
+somebody-phase7-6 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-7, best cost 33.0533 + 1410.75 = 1443.8 over 225 frames.
+somebody-phase7-7 sa5u mo86t <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-8, best cost 26.7431 + 1266.93 = 1293.68 over 235 frames.
+somebody-phase7-8 <UNK> bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase7-9, best cost 25.5663 + 1489.45 = 1515.02 over 274 frames.
+somebody-phase7-9 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-1, best cost 17.4833 + 1325.65 = 1343.13 over 235 frames.
+somebody-phase8-1 na7m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-2, best cost 29.3191 + 1547.79 = 1577.1 over 297 frames.
+somebody-phase8-2 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-3, best cost 29.8737 + 1401.13 = 1431.01 over 263 frames.
+somebody-phase8-3 bo85n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-4, best cost 24.6883 + 1594.94 = 1619.63 over 263 frames.
+somebody-phase8-4 na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-5, best cost 21.9731 + 1401.51 = 1423.48 over 263 frames.
+somebody-phase8-5 chi5n <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-6, best cost 22.4682 + 1447.29 = 1469.76 over 258 frames.
+somebody-phase8-6 ba4y 
+LOG (lattice-add-penalty[5.4.10~1-f629b]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 180 lattices.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-7, best cost 24.8103 + 1236.9 = 1261.71 over 230 frames.
+somebody-phase8-7 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-8, best cost 26.4678 + 1403.04 = 1429.51 over 272 frames.
+somebody-phase8-8 ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase8-9, best cost 27.6519 + 1460.32 = 1487.97 over 251 frames.
+somebody-phase8-9 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-1, best cost 22.4971 + 1354.56 = 1377.06 over 256 frames.
+somebody-phase9-1 ta5m 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-2, best cost 34.6032 + 1358.95 = 1393.55 over 237 frames.
+somebody-phase9-2 bo85n <UNK> <UNK> <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-3, best cost 23.0877 + 1250 = 1273.09 over 239 frames.
+somebody-phase9-3 ba4y <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-4, best cost 22.8147 + 1658.79 = 1681.6 over 281 frames.
+somebody-phase9-4 na7m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-5, best cost 29.4392 + 1395.85 = 1425.29 over 249 frames.
+somebody-phase9-5 chi5n 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-6, best cost 40.3138 + 1493.73 = 1534.04 over 260 frames.
+somebody-phase9-6 bo85n <UNK> <UNK> <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-7, best cost 31.528 + 1440.38 = 1471.91 over 274 frames.
+somebody-phase9-7 <UNK> ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-8, best cost 27.1372 + 1284.78 = 1311.92 over 235 frames.
+somebody-phase9-8 sa5u <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:99) For utterance somebody-phase9-9, best cost 27.0969 + 1302.34 = 1329.44 over 237 frames.
+somebody-phase9-9 ta5m <UNK> 
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:124) Overall cost per frame is 5.56547 = 0.0845526 [graph] + 5.48092 [acoustic] over 49986 frames.
+LOG (lattice-best-path[5.4.10~1-f629b]:main():lattice-best-path.cc:128) Done 180 lattices, failed for 0
 # Accounting: time=1 threads=1
-# Ended (code 0) at Sun Apr 29 13:55:41 +07 2018, elapsed time 1 seconds
+# Ended (code 0) at Sun May  6 23:04:37 +07 2018, elapsed time 1 seconds

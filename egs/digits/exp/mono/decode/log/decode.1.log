@@ -1,282 +1,372 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph/words.txt exp/mono/final.mdl exp/mono/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono/decode/lat.1.gz" 
-# Started at Sun Apr 29 13:53:54 +07 2018
+# Started at Sun May  6 22:54:11 +07 2018
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph/words.txt exp/mono/final.mdl exp/mono/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono/decode/lat.1.gz' 
-apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
 add-deltas ark:- ark:- 
-dinhky-phase1-1 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-1 is -1.59528 over 252 frames.
-dinhky-phase1-2 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-2 is -1.57172 over 254 frames.
-dinhky-phase1-3 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-3 is -1.41624 over 224 frames.
-dinhky-phase1-4 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-4 is -1.52837 over 261 frames.
-dinhky-phase1-5 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-5 is -1.56039 over 231 frames.
-dinhky-phase1-6 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-6 is -1.84752 over 203 frames.
-dinhky-phase1-7 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-7 is -1.66362 over 236 frames.
-dinhky-phase1-8 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-8 is -1.52854 over 252 frames.
-dinhky-phase1-9 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase1-9 is -1.51526 over 259 frames.
-dinhky-phase10-1 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-1 is -1.50813 over 252 frames.
-dinhky-phase10-2 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-2 is -1.54238 over 238 frames.
-dinhky-phase10-3 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-3 is -1.4938 over 275 frames.
-dinhky-phase10-4 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-4 is -1.46637 over 252 frames.
-dinhky-phase10-5 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-5 is -1.52798 over 222 frames.
-dinhky-phase10-6 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-6 is -1.65213 over 238 frames.
-dinhky-phase10-7 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-7 is -1.48159 over 261 frames.
-dinhky-phase10-8 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-8 is -1.7605 over 275 frames.
-dinhky-phase10-9 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase10-9 is -1.50228 over 254 frames.
-dinhky-phase11-1 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-1 is -1.78694 over 247 frames.
-dinhky-phase11-2 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-2 is -1.52659 over 280 frames.
-dinhky-phase11-3 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-3 is -1.68295 over 264 frames.
-dinhky-phase11-4 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-4 is -1.60921 over 226 frames.
-dinhky-phase11-5 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-5 is -1.56376 over 259 frames.
-dinhky-phase11-6 sa5u <UNK> 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-6 is -1.73127 over 356 frames.
-dinhky-phase11-7 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-7 is -1.54264 over 271 frames.
-dinhky-phase11-8 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-8 is -1.66899 over 301 frames.
-dinhky-phase11-9 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase11-9 is -1.51752 over 240 frames.
-dinhky-phase12-1 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-1 is -1.56264 over 282 frames.
-dinhky-phase12-2 ta5m ba <UNK> 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-2 is -2.04095 over 287 frames.
-dinhky-phase12-3 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-3 is -1.48454 over 282 frames.
-dinhky-phase12-4 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-4 is -1.64163 over 250 frames.
-dinhky-phase12-5 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-5 is -1.63556 over 261 frames.
-dinhky-phase12-6 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-6 is -1.47036 over 275 frames.
-dinhky-phase12-7 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-7 is -1.54344 over 294 frames.
-dinhky-phase12-8 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-8 is -1.53014 over 305 frames.
-dinhky-phase12-9 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase12-9 is -1.59685 over 240 frames.
-dinhky-phase13-1 chi5n chi5n na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-1 is -2.26429 over 217 frames.
-dinhky-phase13-2 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-2 is -1.57571 over 282 frames.
-dinhky-phase13-3 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-3 is -1.67464 over 343 frames.
-dinhky-phase13-4 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-4 is -1.46178 over 298 frames.
-dinhky-phase13-5 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-5 is -1.69237 over 240 frames.
-dinhky-phase13-6 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-6 is -1.50411 over 275 frames.
-dinhky-phase13-7 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-7 is -1.73353 over 261 frames.
-dinhky-phase13-8 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-8 is -1.48767 over 319 frames.
-dinhky-phase13-9 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase13-9 is -1.43983 over 268 frames.
-dinhky-phase14-1 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-1 is -1.51311 over 266 frames.
-dinhky-phase14-2 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-2 is -1.56013 over 254 frames.
-dinhky-phase14-3 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-3 is -1.45232 over 268 frames.
-dinhky-phase14-4 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-4 is -1.57244 over 257 frames.
-dinhky-phase14-5 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-5 is -1.45421 over 349 frames.
-dinhky-phase14-6 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-6 is -1.61202 over 271 frames.
-dinhky-phase14-7 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-7 is -1.62696 over 315 frames.
-dinhky-phase14-8 chi5n na7m chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-8 is -1.82791 over 296 frames.
-dinhky-phase14-9 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase14-9 is -1.59602 over 280 frames.
-dinhky-phase15-1 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-1 is -1.5488 over 324 frames.
-dinhky-phase15-2 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-2 is -1.63961 over 275 frames.
-dinhky-phase15-3 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-3 is -1.54976 over 280 frames.
-dinhky-phase15-4 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-4 is -1.66225 over 308 frames.
-dinhky-phase15-5 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-5 is -1.67261 over 264 frames.
-dinhky-phase15-6 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-6 is -1.87264 over 250 frames.
-dinhky-phase15-7 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-7 is -1.5396 over 247 frames.
-dinhky-phase15-8 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-8 is -1.56052 over 280 frames.
-dinhky-phase15-9 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase15-9 is -1.61865 over 291 frames.
-dinhky-phase2-1 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-1 is -1.49376 over 233 frames.
-dinhky-phase2-2 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-2 is -1.51582 over 215 frames.
-dinhky-phase2-3 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-3 is -1.80474 over 219 frames.
-dinhky-phase2-4 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-4 is -1.7608 over 224 frames.
-dinhky-phase2-5 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-5 is -1.50846 over 247 frames.
-dinhky-phase2-6 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-6 is -1.52192 over 212 frames.
-dinhky-phase2-7 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-7 is -1.58458 over 229 frames.
-dinhky-phase2-8 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-8 is -1.55308 over 236 frames.
-dinhky-phase2-9 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase2-9 is -1.52773 over 266 frames.
-dinhky-phase3-1 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-1 is -1.61083 over 231 frames.
-dinhky-phase3-2 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-2 is -1.77783 over 245 frames.
-dinhky-phase3-3 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-3 is -1.50774 over 238 frames.
-dinhky-phase3-4 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-4 is -1.48674 over 250 frames.
-dinhky-phase3-5 mo86t <UNK> 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-5 is -1.8976 over 229 frames.
-dinhky-phase3-6 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-6 is -1.61903 over 240 frames.
-dinhky-phase3-7 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-7 is -1.58748 over 247 frames.
-dinhky-phase3-8 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-8 is -1.46572 over 233 frames.
-dinhky-phase3-9 mo86t 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase3-9 is -1.59171 over 222 frames.
-dinhky-phase4-1 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-1 is -1.80848 over 240 frames.
-dinhky-phase4-2 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-2 is -1.67521 over 233 frames.
-dinhky-phase4-3 ba 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-3 is -1.53263 over 217 frames.
-dinhky-phase4-4 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-4 is -1.6845 over 233 frames.
-dinhky-phase4-5 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-5 is -1.50421 over 236 frames.
-dinhky-phase4-6 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-6 is -1.49214 over 271 frames.
-dinhky-phase4-7 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-7 is -1.59108 over 282 frames.
-dinhky-phase4-8 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-8 is -1.49172 over 236 frames.
-dinhky-phase4-9 hai 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase4-9 is -1.52672 over 240 frames.
-dinhky-phase5-1 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-1 is -1.67739 over 275 frames.
-dinhky-phase5-2 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-2 is -1.64167 over 240 frames.
-dinhky-phase5-3 na7m chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-3 is -1.81986 over 233 frames.
-dinhky-phase5-4 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-4 is -1.5575 over 236 frames.
-dinhky-phase5-5 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-5 is -1.64369 over 271 frames.
-dinhky-phase5-6 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-6 is -1.52628 over 275 frames.
-dinhky-phase5-7 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-7 is -1.52719 over 284 frames.
-dinhky-phase5-8 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-8 is -1.81998 over 264 frames.
-dinhky-phase5-9 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase5-9 is -1.54867 over 280 frames.
-dinhky-phase6-1 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-1 is -1.58323 over 245 frames.
-dinhky-phase6-2 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-2 is -1.45511 over 261 frames.
-dinhky-phase6-3 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-3 is -1.54545 over 289 frames.
-dinhky-phase6-4 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-4 is -1.49818 over 259 frames.
-dinhky-phase6-5 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-5 is -1.61861 over 247 frames.
-dinhky-phase6-6 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-6 is -1.57932 over 257 frames.
-dinhky-phase6-7 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-7 is -1.65413 over 247 frames.
-dinhky-phase6-8 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-8 is -1.69373 over 240 frames.
-dinhky-phase6-9 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase6-9 is -1.60056 over 273 frames.
-dinhky-phase7-1 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-1 is -1.55301 over 217 frames.
-dinhky-phase7-2 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-2 is -1.70871 over 259 frames.
-dinhky-phase7-3 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-3 is -1.6034 over 261 frames.
-dinhky-phase7-4 na7m chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-4 is -2.11898 over 259 frames.
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 135 utterances, errors on 0
-dinhky-phase7-5 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-5 is -1.62664 over 247 frames.
-dinhky-phase7-6 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-6 is -1.59987 over 247 frames.
-dinhky-phase7-7 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-7 is -1.97792 over 226 frames.
-dinhky-phase7-8 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-8 is -1.60232 over 236 frames.
-dinhky-phase7-9 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase7-9 is -1.49959 over 275 frames.
-dinhky-phase8-1 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-1 is -1.55366 over 236 frames.
-dinhky-phase8-2 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-2 is -1.49724 over 298 frames.
-dinhky-phase8-3 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-3 is -1.55435 over 264 frames.
-dinhky-phase8-4 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-4 is -1.97281 over 264 frames.
-dinhky-phase8-5 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-5 is -1.50854 over 264 frames.
-dinhky-phase8-6 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-6 is -1.52347 over 259 frames.
-dinhky-phase8-7 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-7 is -1.58687 over 231 frames.
-dinhky-phase8-8 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-8 is -1.51751 over 273 frames.
-dinhky-phase8-9 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase8-9 is -1.73207 over 252 frames.
-dinhky-phase9-1 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-1 is -1.55007 over 257 frames.
-dinhky-phase9-2 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-2 is -1.70804 over 238 frames.
-dinhky-phase9-3 ba4y 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-3 is -1.52559 over 240 frames.
-dinhky-phase9-4 na7m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-4 is -1.86668 over 282 frames.
-dinhky-phase9-5 chi5n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-5 is -1.70712 over 250 frames.
-dinhky-phase9-6 bo85n 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-6 is -1.73152 over 261 frames.
-dinhky-phase9-7 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-7 is -1.53407 over 275 frames.
-dinhky-phase9-8 sa5u 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-8 is -1.66875 over 236 frames.
-dinhky-phase9-9 ta5m 
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance dinhky-phase9-9 is -1.6358 over 238 frames.
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:176) Time taken 47.1685s: real-time factor assuming 100 frames/sec is 0.135301
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:179) Done 135 utterances, failed for 0
-LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -1.61138 over 34862 frames.
-# Accounting: time=48 threads=1
-# Ended (code 0) at Sun Apr 29 13:54:42 +07 2018, elapsed time 48 seconds
+apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+somebody-phase1-1 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-1 is -4.1374 over 251 frames.
+somebody-phase1-2 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-2 is -4.03496 over 253 frames.
+somebody-phase1-3 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-3 is -3.79789 over 223 frames.
+somebody-phase1-4 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-4 is -3.97196 over 260 frames.
+somebody-phase1-5 ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-5 is -4.0222 over 230 frames.
+somebody-phase1-6 hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-6 is -4.52769 over 202 frames.
+somebody-phase1-7 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-7 is -4.10055 over 235 frames.
+somebody-phase1-8 mo86t chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-8 is -3.98103 over 251 frames.
+somebody-phase1-9 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase1-9 is -3.93801 over 258 frames.
+somebody-phase10-1 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-1 is -3.95021 over 251 frames.
+somebody-phase10-2 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-2 is -3.93245 over 237 frames.
+somebody-phase10-3 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-3 is -3.90559 over 274 frames.
+somebody-phase10-4 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-4 is -3.82214 over 251 frames.
+somebody-phase10-5 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-5 is -3.8999 over 221 frames.
+somebody-phase10-6 <UNK> na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-6 is -4.13662 over 237 frames.
+somebody-phase10-7 <UNK> chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-7 is -3.81858 over 260 frames.
+somebody-phase10-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-8 is -4.29247 over 274 frames.
+somebody-phase10-9 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase10-9 is -4.08292 over 253 frames.
+somebody-phase11-1 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-1 is -3.95056 over 246 frames.
+somebody-phase11-2 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-2 is -3.76452 over 279 frames.
+somebody-phase11-3 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-3 is -3.90254 over 263 frames.
+somebody-phase11-4 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-4 is -3.8722 over 225 frames.
+somebody-phase11-5 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-5 is -3.88802 over 258 frames.
+somebody-phase11-6 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-6 is -4.01679 over 355 frames.
+somebody-phase11-7 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-7 is -3.74199 over 270 frames.
+somebody-phase11-8 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-8 is -3.97537 over 300 frames.
+somebody-phase11-9 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase11-9 is -3.78521 over 239 frames.
+somebody-phase12-1 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-1 is -3.7979 over 281 frames.
+somebody-phase12-2 mo86t ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-2 is -4.2565 over 286 frames.
+somebody-phase12-3 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-3 is -3.69276 over 281 frames.
+somebody-phase12-4 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-4 is -4.0237 over 249 frames.
+somebody-phase12-5 <UNK> ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-5 is -3.90803 over 260 frames.
+somebody-phase12-6 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-6 is -3.71665 over 274 frames.
+somebody-phase12-7 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-7 is -3.88134 over 293 frames.
+somebody-phase12-8 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-8 is -3.80018 over 304 frames.
+somebody-phase12-9 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase12-9 is -3.779 over 239 frames.
+somebody-phase13-1 mo86t ta5m mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-1 is -4.7686 over 216 frames.
+somebody-phase13-2 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-2 is -3.84894 over 281 frames.
+somebody-phase13-3 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-3 is -3.91922 over 342 frames.
+somebody-phase13-4 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-4 is -3.74133 over 297 frames.
+somebody-phase13-5 chi5n sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-5 is -4.00344 over 239 frames.
+somebody-phase13-6 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-6 is -3.62937 over 274 frames.
+somebody-phase13-7 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-7 is -3.9727 over 260 frames.
+somebody-phase13-8 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-8 is -3.77401 over 318 frames.
+somebody-phase13-9 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase13-9 is -3.60749 over 267 frames.
+somebody-phase14-1 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-1 is -3.77125 over 265 frames.
+somebody-phase14-2 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-2 is -3.89808 over 253 frames.
+somebody-phase14-3 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-3 is -3.74253 over 267 frames.
+somebody-phase14-4 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-4 is -3.85809 over 256 frames.
+somebody-phase14-5 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-5 is -3.66585 over 348 frames.
+somebody-phase14-6 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-6 is -3.86409 over 270 frames.
+somebody-phase14-7 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-7 is -3.77135 over 314 frames.
+somebody-phase14-8 <UNK> ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-8 is -4.27632 over 295 frames.
+somebody-phase14-9 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase14-9 is -3.71273 over 279 frames.
+somebody-phase15-1 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-1 is -3.7455 over 323 frames.
+somebody-phase15-2 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-2 is -3.91499 over 274 frames.
+somebody-phase15-3 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-3 is -3.69072 over 279 frames.
+somebody-phase15-4 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-4 is -3.85133 over 307 frames.
+somebody-phase15-5 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-5 is -4.11604 over 263 frames.
+somebody-phase15-6 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-6 is -4.234 over 249 frames.
+somebody-phase15-7 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-7 is -3.77127 over 246 frames.
+somebody-phase15-8 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-8 is -3.73878 over 279 frames.
+somebody-phase15-9 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase15-9 is -3.69986 over 290 frames.
+somebody-phase16-1 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-1 is -4.37217 over 409 frames.
+somebody-phase16-2 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-2 is -4.51373 over 293 frames.
+somebody-phase16-3 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-3 is -4.30217 over 418 frames.
+somebody-phase16-4 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-4 is -4.41748 over 318 frames.
+somebody-phase16-5 <UNK> sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-5 is -4.41334 over 314 frames.
+somebody-phase16-6 <UNK> hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-6 is -4.36199 over 386 frames.
+somebody-phase16-7 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-7 is -4.31122 over 390 frames.
+somebody-phase16-8 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-8 is -4.51452 over 314 frames.
+somebody-phase16-9 <UNK> bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase16-9 is -4.48625 over 307 frames.
+somebody-phase17-1 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-1 is -4.4744 over 302 frames.
+somebody-phase17-2 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-2 is -4.39847 over 286 frames.
+somebody-phase17-3 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-3 is -4.38382 over 351 frames.
+somebody-phase17-4 <UNK> sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-4 is -4.45889 over 321 frames.
+somebody-phase17-5 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-5 is -4.49923 over 316 frames.
+somebody-phase17-6 <UNK> bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-6 is -4.41496 over 288 frames.
+somebody-phase17-7 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-7 is -4.3634 over 360 frames.
+somebody-phase17-8 <UNK> hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-8 is -4.43361 over 467 frames.
+somebody-phase17-9 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase17-9 is -4.50574 over 388 frames.
+somebody-phase18-1 <UNK> bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-1 is -4.35443 over 330 frames.
+somebody-phase18-2 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-2 is -4.44925 over 348 frames.
+somebody-phase18-3 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-3 is -4.28531 over 295 frames.
+somebody-phase18-4 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-4 is -4.3898 over 465 frames.
+somebody-phase18-5 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-5 is -4.44782 over 286 frames.
+somebody-phase18-6 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-6 is -4.46094 over 309 frames.
+somebody-phase18-7 <UNK> hai <UNK> <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-7 is -4.30387 over 411 frames.
+somebody-phase18-8 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-8 is -4.51778 over 318 frames.
+somebody-phase18-9 <UNK> sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase18-9 is -4.37331 over 321 frames.
+somebody-phase19-1 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-1 is -4.53349 over 372 frames.
+somebody-phase19-2 <UNK> <UNK> hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-2 is -4.48783 over 346 frames.
+somebody-phase19-3 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-3 is -4.4116 over 328 frames.
+somebody-phase19-4 <UNK> bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-4 is -4.37512 over 293 frames.
+somebody-phase19-5 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-5 is -4.33297 over 293 frames.
+somebody-phase19-6 <UNK> sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-6 is -4.38673 over 339 frames.
+somebody-phase19-7 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-7 is -4.47617 over 321 frames.
+somebody-phase19-8 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-8 is -4.43158 over 409 frames.
+somebody-phase19-9 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase19-9 is -4.54081 over 283 frames.
+somebody-phase2-1 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-1 is -4.09778 over 232 frames.
+somebody-phase2-2 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-2 is -4.13827 over 214 frames.
+somebody-phase2-3 <UNK> mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-3 is -4.34846 over 218 frames.
+somebody-phase2-4 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-4 is -4.33698 over 223 frames.
+somebody-phase2-5 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-5 is -3.81461 over 246 frames.
+somebody-phase2-6 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-6 is -4.10457 over 211 frames.
+somebody-phase2-7 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-7 is -4.05706 over 228 frames.
+somebody-phase2-8 mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-8 is -3.947 over 235 frames.
+somebody-phase2-9 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase2-9 is -3.9578 over 265 frames.
+somebody-phase20-1 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-1 is -4.47319 over 295 frames.
+somebody-phase20-2 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-2 is -4.45506 over 397 frames.
+somebody-phase20-3 <UNK> bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-3 is -4.42617 over 339 frames.
+somebody-phase20-4 <UNK> ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-4 is -4.42118 over 304 frames.
+somebody-phase20-5 <UNK> hai <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-5 is -4.48804 over 346 frames.
+somebody-phase20-6 <UNK> sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-6 is -4.4023 over 339 frames.
+somebody-phase20-7 <UNK> ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-7 is -4.43753 over 314 frames.
+somebody-phase20-8 <UNK> ba <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-8 is -4.47852 over 337 frames.
+somebody-phase20-9 <UNK> chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase20-9 is -4.56107 over 293 frames.
+somebody-phase3-1 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-1 is -3.97374 over 230 frames.
+somebody-phase3-2 mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-2 is -4.30275 over 244 frames.
+somebody-phase3-3 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-3 is -4.08973 over 237 frames.
+somebody-phase3-4 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-4 is -3.90395 over 249 frames.
+somebody-phase3-5 <UNK> mo86t <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-5 is -4.45555 over 228 frames.
+somebody-phase3-6 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-6 is -4.19277 over 239 frames.
+somebody-phase3-7 <UNK> mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-7 is -4.03469 over 246 frames.
+somebody-phase3-8 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-8 is -3.80199 over 232 frames.
+somebody-phase3-9 <UNK> mo86t 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase3-9 is -3.98556 over 221 frames.
+somebody-phase4-1 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-1 is -4.3789 over 239 frames.
+somebody-phase4-2 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-2 is -4.27233 over 232 frames.
+somebody-phase4-3 ba 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-3 is -4.01461 over 216 frames.
+somebody-phase4-4 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-4 is -4.41757 over 232 frames.
+somebody-phase4-5 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-5 is -3.83333 over 235 frames.
+somebody-phase4-6 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-6 is -3.9222 over 270 frames.
+somebody-phase4-7 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-7 is -4.11037 over 281 frames.
+somebody-phase4-8 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-8 is -3.86688 over 235 frames.
+somebody-phase4-9 hai 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase4-9 is -3.92618 over 239 frames.
+somebody-phase5-1 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-1 is -4.20414 over 274 frames.
+somebody-phase5-2 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-2 is -4.13348 over 239 frames.
+somebody-phase5-3 <UNK> na7m chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-3 is -4.46782 over 232 frames.
+somebody-phase5-4 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-4 is -3.90376 over 235 frames.
+somebody-phase5-5 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-5 is -4.21515 over 270 frames.
+somebody-phase5-6 <UNK> na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-6 is -3.95604 over 274 frames.
+somebody-phase5-7 ta5m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-7 is -4.01628 over 283 frames.
+somebody-phase5-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-8 is -4.45882 over 263 frames.
+somebody-phase5-9 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase5-9 is -3.93901 over 279 frames.
+somebody-phase6-1 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-1 is -4.04165 over 244 frames.
+somebody-phase6-2 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-2 is -3.83733 over 260 frames.
+somebody-phase6-3 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-3 is -4.00918 over 288 frames.
+somebody-phase6-4 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-4 is -3.965 over 258 frames.
+somebody-phase6-5 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-5 is -4.19216 over 246 frames.
+somebody-phase6-6 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-6 is -4.06746 over 256 frames.
+somebody-phase6-7 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-7 is -4.01601 over 246 frames.
+somebody-phase6-8 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-8 is -4.30763 over 239 frames.
+somebody-phase6-9 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase6-9 is -4.24028 over 272 frames.
+somebody-phase7-1 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-1 is -4.0589 over 216 frames.
+somebody-phase7-2 chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-2 is -4.15206 over 258 frames.
+somebody-phase7-3 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-3 is -4.01956 over 260 frames.
+somebody-phase7-4 na7m chi5n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-4 is -4.92339 over 258 frames.
+somebody-phase7-5 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-5 is -3.99013 over 246 frames.
+somebody-phase7-6 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-6 is -3.97898 over 246 frames.
+somebody-phase7-7 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-7 is -4.7847 over 225 frames.
+somebody-phase7-8 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-8 is -4.04431 over 235 frames.
+somebody-phase7-9 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase7-9 is -4.08448 over 274 frames.
+somebody-phase8-1 na7m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-1 is -4.13246 over 235 frames.
+somebody-phase8-2 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-2 is -3.86448 over 297 frames.
+somebody-phase8-3 bo85n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-3 is -3.98882 over 263 frames.
+somebody-phase8-4 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-4 is -4.60624 over 263 frames.
+somebody-phase8-5 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-5 is -3.93187 over 263 frames.
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 180 utterances, errors on 0
+somebody-phase8-6 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-6 is -4.15899 over 258 frames.
+somebody-phase8-7 sa5u 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-7 is -4.055 over 230 frames.
+somebody-phase8-8 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-8 is -3.85579 over 272 frames.
+somebody-phase8-9 ba4y <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase8-9 is -4.38055 over 251 frames.
+somebody-phase9-1 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-1 is -3.94252 over 256 frames.
+somebody-phase9-2 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-2 is -4.31916 over 237 frames.
+somebody-phase9-3 ba4y 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-3 is -3.93024 over 239 frames.
+somebody-phase9-4 na7m <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-4 is -4.47129 over 281 frames.
+somebody-phase9-5 chi5n 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-5 is -4.19345 over 249 frames.
+somebody-phase9-6 bo85n <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-6 is -4.32904 over 260 frames.
+somebody-phase9-7 <UNK> ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-7 is -3.97012 over 274 frames.
+somebody-phase9-8 sa5u <UNK> 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-8 is -4.12887 over 235 frames.
+somebody-phase9-9 ta5m 
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance somebody-phase9-9 is -4.12786 over 237 frames.
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:176) Time taken 98.0929s: real-time factor assuming 100 frames/sec is 0.196241
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:179) Done 180 utterances, failed for 0
+LOG (gmm-latgen-faster[5.4.10~1-f629b]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -4.14118 over 49986 frames.
+# Accounting: time=98 threads=1
+# Ended (code 0) at Sun May  6 22:55:49 +07 2018, elapsed time 98 seconds

@@ -1,5 +1,5 @@
 # gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.5 1 exp/mono/14.mdl - |" "ark:gunzip -c exp/mono/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.1.gz" 
-# Started at Sun Apr 29 13:41:13 +07 2018
+# Started at Sun May  6 22:52:30 +07 2018
 #
 gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.5 1 exp/mono/14.mdl - |' 'ark:gunzip -c exp/mono/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.1.gz' 
 gmm-boost-silence --boost=1.5 1 exp/mono/14.mdl - 
@@ -9,10 +9,6 @@ LOG (gmm-boost-silence[5.4.10~1-f629b]:main():gmm-boost-silence.cc:103) Wrote mo
 add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky12
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky13
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky4
@@ -22,9 +18,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v1_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky12
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky4
@@ -34,9 +27,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v2_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky12
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky4
@@ -46,9 +36,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v3_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky12
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky4
@@ -58,9 +45,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v4_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky12
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky3
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky4
@@ -69,54 +53,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky7
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v5_Ky9
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky12
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky2
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky3
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky4
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky5
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky6
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky7
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v6_Ky9
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky12
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky2
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky3
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky4
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky5
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky6
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky7
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v7_Ky9
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky12
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky2
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky3
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky4
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky5
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky6
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky7
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v8_Ky9
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky1
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky10
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky11
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky12
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky2
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky3
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky4
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky5
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky6
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky7
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhky-v9_Ky9
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhthin-v1_Thin1
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhthin-v1_Thin2
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) dinhthin-v1_Thin3
@@ -186,7 +122,6 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa4
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa5
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa6
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 198 utterances, errors on 0
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa7
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa8
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v3_Hoa9
@@ -207,8 +142,55 @@ LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v5_Hoa6
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v5_Hoa7
 LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v5_Hoa8
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -17.4461 over 52971 frames.
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:137) Retried 0 out of 198 utterances.
-LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:139) Done 198, errors on 0
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thihoa-v5_Hoa9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v1_Lich9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v2_Lich9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v3_Lich9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich1
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v4_Lich9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich1
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 180 utterances, errors on 0
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich2
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich3
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich4
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich5
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich6
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich7
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich8
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:127) thilich-v5_Lich9
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -42.1031 over 51998 frames.
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:137) Retried 0 out of 180 utterances.
+LOG (gmm-align-compiled[5.4.10~1-f629b]:main():gmm-align-compiled.cc:139) Done 180, errors on 0
 # Accounting: time=5 threads=1
-# Ended (code 0) at Sun Apr 29 13:41:18 +07 2018, elapsed time 5 seconds
+# Ended (code 0) at Sun May  6 22:52:35 +07 2018, elapsed time 5 seconds
