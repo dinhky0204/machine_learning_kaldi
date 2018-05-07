@@ -1,5 +1,5 @@
 # align-equal-compiled "ark:gunzip -c exp/mono/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |" ark,t:- | gmm-acc-stats-ali --binary=true exp/mono/0.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |" ark:- exp/mono/0.1.acc 
-# Started at Sun May  6 22:51:31 +07 2018
+# Started at Mon May  7 18:22:11 +07 2018
 #
 align-equal-compiled 'ark:gunzip -c exp/mono/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |' ark,t:- 
 gmm-acc-stats-ali --binary=true exp/mono/0.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas ark:- ark:- |' ark:- exp/mono/0.1.acc 
@@ -7,14 +7,12 @@ apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmv
 add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
 add-deltas ark:- ark:- 
-LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance dinhthin-v1_Thin5 avg. like is -52.6307 over 302 frames.
-LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance thihoa-v2_Hoa1 avg. like is -51.6231 over 300 frames.
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 180 utterances, errors on 0
-LOG (align-equal-compiled[5.4.10~1-f629b]:main():align-equal-compiled.cc:107) Success: done 180 utterances.
-LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance thilich-v2_Lich6 avg. like is -52.2117 over 328 frames.
-LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 180 utterances, errors on 0
-LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:112) Done 180 files, 0 with errors.
-LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -53.7498 over 51998 frames.
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 99 utterances, errors on 0
+LOG (align-equal-compiled[5.4.10~1-f629b]:main():align-equal-compiled.cc:107) Success: done 99 utterances.
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance dinhky-v4_Ky5 avg. like is -76.3961 over 239 frames.
+LOG (apply-cmvn[5.4.10~1-f629b]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 99 utterances, errors on 0
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:112) Done 99 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -76.519 over 25002 frames.
 LOG (gmm-acc-stats-ali[5.4.10~1-f629b]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Sun May  6 22:51:31 +07 2018, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon May  7 18:22:12 +07 2018, elapsed time 1 seconds

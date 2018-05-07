@@ -1,0 +1,115 @@
+# paste-feats --length-tolerance=2 "ark:compute-mfcc-feats  --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true ark:- ark,scp:/home/dinhky/Do_An/kaldi-trunk/egs/digits/mfcc/raw_mfcc_pitch_test.1.ark,/home/dinhky/Do_An/kaldi-trunk/egs/digits/mfcc/raw_mfcc_pitch_test.1.scp 
+# Started at Mon May  7 18:22:04 +07 2018
+#
+paste-feats --length-tolerance=2 'ark:compute-mfcc-feats  --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
+copy-feats --compress=true ark:- ark,scp:/home/dinhky/Do_An/kaldi-trunk/egs/digits/mfcc/raw_mfcc_pitch_test.1.ark,/home/dinhky/Do_An/kaldi-trunk/egs/digits/mfcc/raw_mfcc_pitch_test.1.scp 
+compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-2
+process-kaldi-pitch-feats ark:- ark:- 
+compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase1-9
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase10-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-1
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 20 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase2-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-2
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 30 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase3-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-3
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 40 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase4-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-4
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-8
+VLOG[2] (compute-kaldi-pitch-feats[5.4.10~1-f629b]:main():compute-kaldi-pitch-feats.cc:107) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase5-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-5
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 60 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase6-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-6
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 70 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase7-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-7
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 80 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-8
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase8-9
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-1
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-2
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-3
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-4
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-5
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-6
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-7
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-8
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:172) Processed 90 utterances
+VLOG[2] (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:173) Processed features for key dinhky-phase9-9
+LOG (compute-mfcc-feats[5.4.10~1-f629b]:main():compute-mfcc-feats.cc:176)  Done 90 out of 90 utterances.
+LOG (compute-kaldi-pitch-feats[5.4.10~1-f629b]:main():compute-kaldi-pitch-feats.cc:110) Done 90 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats[5.4.10~1-f629b]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 90 utterances.
+LOG (paste-feats[5.4.10~1-f629b]:main():paste-feats.cc:158) Done 90 utts, errors on 0
+LOG (copy-feats[5.4.10~1-f629b]:main():copy-feats.cc:143) Copied 90 feature matrices.
+# Accounting: time=5 threads=1
+# Ended (code 0) at Mon May  7 18:22:09 +07 2018, elapsed time 5 seconds
